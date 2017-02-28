@@ -1,0 +1,5 @@
+if (window.applicationCache) {
+    document.write("Browser supports offline web apps");
+} else {
+    document.write("Browser does not support offline web apps");
+}
