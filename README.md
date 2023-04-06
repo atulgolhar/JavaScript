@@ -1,1 +1,2 @@
-# JavaScript code snippets
+// JavaScript Notes - HTML5 CSS3 2023
+
