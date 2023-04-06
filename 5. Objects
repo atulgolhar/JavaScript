@@ -1,0 +1,21 @@
+// ToC Basics 5. Objects
+
+let person = {
+    name: 'Mosh',
+    age: 30
+};
+
+// Dot notation
+person.name = 'John';           // concise, shorter thus default
+console.log(person.name);
+
+
+// Bracket notation
+person['name'] = 'Mary';        // pass string 
+console.log(person.name);
+
+
+// Bracket notation but using target property selection at runtime
+let selection = 'name';         // use this when user selects this target property at run time
+person[selection] = 'Sal';
+console.log(person.name);
