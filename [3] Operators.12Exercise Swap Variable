@@ -1,0 +1,14 @@
+// Swap Variable Colors
+
+let a = 'red';
+let b = 'blue';
+
+console.log('Original a = ' + a);
+console.log('Original b = ' + b);
+
+let c = a;        // c = 'red' thus both c and a are BOTH red and now can update a to new color
+a = b;            // a = takes on b color of 'blue'
+b = c;            // b = takes on c color
+
+console.log('Swapped: a = ' + a);
+console.log('Swapped: b = ' + b);
