@@ -1,20 +1,3 @@
-/*
-<!DOC TYPE ?????
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello World from Needham MA</h1>
-    <script src="index.js"></script>
-</body>
-</html> 
-
-</meta> Divisible by 3 => Fizz
-*/
-
 // =========================================================
 // BASICS
 // =========================================================
@@ -46,6 +29,8 @@ interestRate1 = 1;
 console.log(interestRate1);
 // 1 on the console
 
+// ==================
+
 // if dont want variable to change, then use const
 const interestRate2 = 0.4
 interestRate2 = 1;
@@ -65,6 +50,8 @@ Boolean
 undefined
 null
 
+// ==================
+
 // 5 types of Primitive Types
 
 let name = 'Mosh';          // String Literal
@@ -72,6 +59,9 @@ let age = 30;               // Number Literal
 let isApproved = true;      // Boolean Literal
 let firstName = undefined;  // Undefined
 let selectedColor = null;   // Null
+
+
+// ==================
 
 
 let firstName;      // if not assigned, then its 'undefined'
@@ -96,6 +86,8 @@ string name = 'John';       //this can not change in the future
 // Dynamic typed    
 let name = 'John'           // this can change at run time
 
+// ==================
+
 // in VSCode we can type out
 let name = 'Mosh';
 let age = 30;
@@ -110,6 +102,8 @@ let selectedColor = null;
 // > typeof age             // 'number'
 // > age = 30.1             // 30.1         // here we use a floating point number
 // > typeof age             // 'number'     // what does this show? that all numbers are just numbers. There are no floating point numbers.
+
+// ==================
 
 
 let name = 'Mosh';
@@ -133,12 +127,16 @@ let selectedColor = null;
 // =========================================================
 5 OBJECTS
 
+// ==================
+
 // so you have seen all the Primitive Types in JavaScript,
 // now lets look at the Reference Types
 
 // Objects          we cover Objects after 4 CONTROL FLOW, 5 OBJECTS
 // Arrays           we cover Arrays in 6 ARRAYS
 // Functions        we cover Functions in 7 FUNCTIONS
+
+// ==================
 
 // Objects          we cover Objects after 4 CONTROL FLOW, 5 OBJECTS
 
@@ -213,10 +211,14 @@ let selectedColor = null;
 
         console.log(person.name);           // we get Mary in the console. <<<<<SAME RESULT<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
+// =========================================================
+6 ARRAYS
+
+// ==================
 
 // Arrays           we cover Arrays in 6 ARRAYS
 
-        // somethimes you have a list of something
+        // somethimes you have a list of objects, use an array to store that list
 
         let selectedColors = [];        // initialize this with an ARRAY LITERAL and the [] square brackets indicate an empty array.
 
@@ -225,7 +227,7 @@ let selectedColor = null;
         // lets log this the console...
 
         let selectedColors = ['red', 'blue'];
-        console.log(selectedColors);                // console shows ['red', 'blue']
+        console.log(selectedColors);                // console shows our array with two elements ['red', 'blue']
 
         /*
         (2) ['red', 'blue']
@@ -235,62 +237,474 @@ let selectedColor = null;
         [[Prototype]]: Array(0)
         */
 
-        // to specify the 1st value in the array, we add the [] square brackets and the index #
+        // to specify the 1st value in the array, we add the [] square brackets and specify the index #
 
         let selectedColors = ['red', 'blue'];
         console.log(selectedColors[0]);             // in the console we get red
 
-        // remember that earlier I said: 
         // JavaScript is a dynmaic language so the variables can change at run time. 
         // The same principles apply to our arrays.
         // So the length of an array as well as the types of objects we have in the array are dynamic (ie they can change).
 
-        let selectedColors = ['red', 'blue'];
-        console.log(selectedColors[0]);
+        let selectedColors = ['red', 'blue'];      
+        console.log(selectedColors[0]);           
 
         // we add another element to this array so the array will expand like this
 
-        let selectedColors = ['red', 'blue'];
-        selectedColors[2] = 'green';
-        console.log(selectedColors);            // console shows  ['red', 'blue', 'green']
+        let selectedColors = ['red', 'blue'];   // here we initiliaze this array with two elements
+        selectedColors[2] = 'green';            // add another element string to this array so the array expands
+        console.log(selectedColors);            // console shows  ['red', 'blue', 'green'] array with 3 elements
 
         // so now we an array with 3 elements
         // so the length is dynamic
-        // also the type of objects we have in this array is also dynamic. So we can make the last element now a number
-        // thus we have two strings and a number
+        // also the type of objects we have in this array is also dynamic. 
+        // So we can make the last element now a number thus we have two strings and a number
 
         let selectedColors = ['red', 'blue'];
-        selectedColors[2] = 12;
+        selectedColors[2] = 12;                 // add another element number to this array so the array expands
         console.log(selectedColors);            // console shows  ['red', 'blue', 12]
 
         // so the objects in the array as well as the size of the array are dyanmic.
 
-        // now techically the array is an object, so we can use the key value and dot notation.
+        // now techically the array is an object, so we can use the key value pairs or properties that we cann access using dot notation.
+        // lets prove this to you using typeof 
         // in the console
         > typeof selectedColors
         > 'object'      // so the typeof this array is an object
-
-
+        
+        // now lets see the properties of this object using the DOT NOTATION
         let selectedColors = ['red', 'blue'];
         selectedColors[2] = 12;
         console.log(selectedColors.);            // console shows  ['red', 'blue', 'green']
         //                        ^ using the dotation offer many properties to choose from INHERITANCE from PROTOTYPES
 
+        console.log(selectedColors.);
+        //                        ^
+                                // every
+                                // fill
+                                // filter
+                                // find
+                                // findIndex
+                                // forEach
+                                // includes
+                                // indexOf
+                                // join
+                                // keys
+                                // lastIndexOf
+                                // length           <========================================================================
+                                // map
+                                // pop
+// these are all the properties using the dot notation
+// using square brackets means that array will automatically receive thse properties
+// we did NOT explicitedly define them. The somehow "magically" appeared --> inheritance. We learn this in Prototypes.
 
+// now we look at one of these properties --> length property <==============================================================
         let selectedColors = ['red', 'blue'];
         selectedColors[2] = 12;
         console.log(selectedColors.length);         // now lets look a the length property which returns a 3 in the console
         // so here we learn an array a data structure that we use to represent a list of items.
 
 
+
+
+// =========================================================
+7 FUNCTIONS
+// ==================
+
 // Functions        we cover Functions in 7 FUNCTIONS
 
+//lets define a function and inside {} is the body of the fucntion to hold function's logic
+
+function greet() {}  
+
+// ==================
+
+// logic for the function is to display a message on the console
+
+function greet() {                              // function declaration
+    console.log('Hello World');  
+}
+  
+greet();                                      // call the function AND add semicolon ; to indicate that this is a statement
+  
+// ==================
+
+// greet function has 1 parameter called name and only meaningful inside of this function
+// lets add a variable John
+// we refer to this variable as a parameter
+// name is an input to this function
+// when calling greet function we need to pass a value for the name variable or name parameter more accurately
+// we refer to 'John' as an argument
+
+
+function greet(name) {                      // [2] need to pass in a value for the name parameter. Parameter is here at the time of declaration.
+    console.log('Hello ' + name);  
+}
+  
+greet('John');                              // [1] John is an argument to the greet function, so we pass this argument called John
+
+// ==================
+
+// IMPORTANT
+// [1] John is an argument to the greet function
+// [2] name is a parameter to the greet function
+// note the difference between a parameter and an argument
+// [2] a parameter is what we have here at the time of declaration
+// [1] but the argument is the ACTUAL value that supply for that parameter
+
+
+function greet(name) {
+    console.log('Hello ' + name);  
+}
+  
+greet('John');
+greet('Mary');      // add a second argument here and pass this argument to the function
+
+
+// ==================
+
+// lets add a another parameter to the function which is lastName
+// what happens is dont add anything to the function call? what happens?
+
+function greet(name, lastName) {
+    console.log('Hello ' + name + ' ' + lastName);  
+}
+  
+greet('John');
+greet('Mary');
+  
+// ==================
+
+
+function greet(name, lastName) {
+    console.log('Hello ' + name + ' ' + lastName);  
+}
+  
+greet('John');
+greet('Mary');
+  
+// note output as 
+          // Hello John undefined
+          // Hello Mary undefined
+// note that the default value is undefined.
+
+// ==================
+
+function greet(name, lastName) {
+    console.log('Hello ' + name + ' ' + lastName);  
+}
+  
+greet('John', 'Smith');
+  
+// output now is Hello John Smith
+  
+
+// =========================================================
+8 TYPES OF FUNCTIONS 
+
+// later we use Template Literals to clean up this code
+
+// Performing a task
+function greet(name, lastName) {
+    console.log('Hello ' + name + ' ' + lastName);  
+}
+
+// ==================
+  
+// Calculating a value
+// takes in a parameter called number
+function square(number) {}
+
+// ==================
+
+// now we need to calculate the square of that number
+// return keyword is used to return the value to whoever is calling the function
+// use that value to initialize a variable
+function square(number) { 
+
+}
+
+
+// ==================
+
+
+// Performing a task
+function greet(name, lastName) {
+    console.log('Hello ' + name + ' ' + lastName);  
+}
+  
+// ==================
+
+//Calculating a value
+function square(number) {
+return number * number;
+}
+
+let number = square(2);
+console.log(number);
+
+
+// ==================
+
+
+// Performing a task
+function greet(name, lastName) {
+    console.log('Hello ' + name + ' ' + lastName);  
+}
+
+//Calculating a value
+function square(number) {
+return number * number;
+}
+
+console.log(square(2));
+
+// dont need to actually declare seperate variable if all we need to do is display it on the console
+// we can exclude the variable declartion and simply pass square(2) to console.log()
+// so when the JavaScript executes this code, 1st it calls this function square(2), it will get a value, and then pass that value to console.log
+  
+// note that we actally have two function calls here. 1st is square(2) and 2nd is function square(number)
+
+// Take Away: function is performs a task or calculates and returns a value. A real world applicaiton is essentially a collection of hundreds
+//            thousands of functions working together to provide the functionality of that application.
+
+
+
+
+// =========================================================
+OPERTATORS
+
+
+// =========================================================
+1 JavaScript Operators
+
+// ==================
+
+// 1 Arithemetic Operators      + - * / % **
+
+// ==================
+
+// 2 Arithemetic Operators 
+
+let x = 10;
+let y = 3;
+
+console.log(x + y);     // x + y is an expression. An expression is something that produces a value.
+
+
+let x = 10;
+let y = 3;
+
+console.log(x + y);
+console.log(x - y);
+console.log(x * y);
+console.log(x / y);
+console.log(x % y);
+console.log(x ** y);
+
+// ==================
+
+let x = 10;
+let y = 3;
+
+// console.log(x + y);
+// console.log(x - y);
+// console.log(x * y);
+// console.log(x / y);
+// console.log(x % y);
+// console.log(x ** y);
+
+// Increment (++)
+console.log(++x);       // value is incremented by 1 first then we see that on the console        11
+
+// ==================
+
+// Increment (++)
+console.log(++x);       //  increments x by 1, THEN prints that to the console as 11
+
+// ==================
+
+// Increment (++)
+console.log(x++);       // console.log prints 10 AND THEN increments x in memory but does NOT print that updated memory amount
+                            10
+
+// ==================
+
+// Increment (++)
+console.log(x++);       // prints 10 to the console, then increments x to 11 in memory
+console.log(x);         // now if we include another console.log statement then it will show 10 and next line will show 11.
+
+                            10
+                            11
+
+
+// ==================
+
+// Decrement (--)
+
+console.log(--x);       // decrement to variable x occurs in memory and then the console.log displays that
+
+                            9
+
+// ==================
+
+// 3 Assignment Operators 
+
+// ==================Basic starting point
+
+let x = 10;
+
+console.log(x);         // 10
+
+x++;                    // reads x (into memory), increments by 1, and that new value is stored in memory
+
+console.log(x);         // 11
+
+// ==================
+
+
+let x = 10;
+
+x++;                    // reads x (into memory), increments by 1, and that new value is stored in memory
+console.log(x);         // 11
+
+x = x + 1;              // same thing here. reads x, then increments by 1, and that new value is stored into x
+
+
+// ==================
+
+let x = 10;
+
+// x = x + 5;
+x = x+5;                // x stays at 5
+
+console.log(x);
+
+// ==================
+
+
+let x = 10;
+
+// x = x + 5;
+// console.log(x)
+
+x += 5;
+console.log(x)
+
+// ================== 
+
+// so all of prior lessons Arithmetic Operators are also applicable here.
+
+let x = 10;
+
+x = x + 5;
+x += 5;     // addition assignment operator
+
+x =  x * 3;   
+x *= 3;      // multiplication assgnment operator
+
+
+// 4 Comparison Operators
+
+
+// ==================
+
+let x = 1;
+
+console.log(x > 0);   // comparison operator here. Result is a Boolean. Its true or false.
+
+// ==================
+
+
+let x = 1;
+
+// Relational Operators
+console.log(x > 0);       // true. comparison operator here. Result is a Boolean. Its true or false.
+console.log(x >= 1);      // true.
+console.log(x < 1);       // true. 
+console.log(x <= 1);      // true.
+
+// ==================
+
+
+// ==================
+
+// ==================
+
+// ==================
+
+// ==================
+
+// ==================
+
+// ==================
+
+// ==================
+
+// ==================
+
+// ==================
+
+// ==================
+
+// ==================
+
+// ==================
+
+// ==================
+
+// ==================
+
+// ==================
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+// 7 Logical Operators
+// 9 Bitwise Operators
+
+
+
+// =========================================================
+2 Arithmetic Operators 
+
+// =========================================================
+3 Assignment Operators 
+
+// =========================================================
+4 Comparision Operators 
+
+// =========================================================
+5 Equality Operators 
+
+// =========================================================
+6 Ternary Operators 
+
+// =========================================================
+7 Logical Operators 
+
+// =========================================================
+8 Logical Operators with Non-Booleans
+
+// =========================================================
+9 Bitwise Operators 
+
+// =========================================================
+10 Operators Precedence
 
 
 
