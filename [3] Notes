@@ -1,1 +1,894 @@
-tbd
+/*
+<!DOC TYPE ?????
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World from Needham MA</h1>
+    <script src="index.js"></script>
+</body>
+</html> 
+
+</meta> Divisible by 3 => Fizz
+*/
+
+// =========================================================
+// BASICS
+// =========================================================
+// 1 VARIABLES
+let name;
+console.log(name);              // by default undefined
+
+let name = 'Mosh'               
+console.log(name);
+// rule1: cannot be reserved keyword
+// rule2: should be meaningful, descriptive names
+// rule3: cannot start with a number
+// rule4: cannot contain a space of hyphen (-)
+// rule5: are case-sensitive
+// rule6: to declare multiple variables, two ways to do this
+let firstName = 'Mosh', lastName = = 'Golhar';
+// modern best practice, use seperate lines
+let firstName = 'Mosh';
+let lastName = = 'Golhar';
+
+let firstName; // Camel case
+
+// =========================================================
+2 CONSTANTS
+
+
+let interestRate1 = 0.4
+interestRate1 = 1;
+console.log(interestRate1);
+// 1 on the console
+
+// if dont want variable to change, then use const
+const interestRate2 = 0.4
+interestRate2 = 1;
+console.log(interestRate2);
+
+
+// =========================================================
+3 PRIMITIVE TYPES
+
+
+Primitives / Value SVGUnitTypes
+
+// list the types
+String
+Number
+Boolean
+undefined
+null
+
+// 5 types of Primitive Types
+
+let name = 'Mosh';          // String Literal
+let age = 30;               // Number Literal
+let isApproved = true;      // Boolean Literal
+let firstName = undefined;  // Undefined
+let selectedColor = null;   // Null
+
+
+let firstName;      // if not assigned, then its 'undefined'
+console.log(firstName);         // undefined
+
+let firstName = undefined;      // if not assigned, then its                undefined
+console.log(firstName);         // console output is                        undefined
+
+let selectedColor = null;       // in the beginning we assign it to null so use null in situations where we want to clear the value of a variable
+let selectedColor = 'red';      // in the future we can reassign it to red
+
+// ES6 introdued another Primitive called symbol, we teach this later in the course
+
+// =========================================================
+4 DYNAMIC TYPING
+
+// Dynmaic Languages
+
+// Static typed 
+string name = 'John';       //this can not change in the future
+// vs.
+// Dynamic typed    
+let name = 'John'           // this can change at run time
+
+// in VSCode we can type out
+let name = 'Mosh';
+let age = 30;
+let isApproved = false;
+let firstName = undefined;
+let selectedColor = null;
+// then in the console given this, we type 
+// >typeof name             // 'string'
+// >name = 1;               // 1
+// >typeof name             // 'number'
+// now clear console
+// > typeof age             // 'number'
+// > age = 30.1             // 30.1         // here we use a floating point number
+// > typeof age             // 'number'     // what does this show? that all numbers are just numbers. There are no floating point numbers.
+
+
+let name = 'Mosh';
+let age = 30;
+let isApproved = false;
+let firstName = undefined;
+let selectedColor = null;
+
+// in the console, 
+// > typeof isApproved      // boolean
+// > typeof firstName       // undefined        Notice that the value of this variable is undefined but its type is also undefined
+//                                              what does this mean?
+//                                              two categories of types Primitives/Value Types = Strings, Number, Boolean, undefined, null
+//                                              so undefined is a type but its also a value
+// so here we set firstName to THE VALUE undefined, its type is also undefined
+
+// > typeof selectedColor   // objet
+
+// what is an object? see next lecture
+
+// =========================================================
+5 OBJECTS
+
+// so you have seen all the Primitive Types in JavaScript,
+// now lets look at the Reference Types
+
+// Objects          we cover Objects after 4 CONTROL FLOW, 5 OBJECTS
+// Arrays           we cover Arrays in 6 ARRAYS
+// Functions        we cover Functions in 7 FUNCTIONS
+
+// Objects          we cover Objects after 4 CONTROL FLOW, 5 OBJECTS
+
+        let name = 'Mosh';
+        let age = 30;
+
+        // we have two variables here, but we can also include these two variables INSIDE a PERSON object
+        // start with let or const if we dont want to reassign the person object
+        // so we set person to an OBJECT LITERAL
+        //                      let person = {};
+        // between the curly braces we add KEY VALUE PAIRS which the PROPERTIES OF THIS OBJECT
+        // two keys which are name and age
+        // so we add name then use colon : and set the value as 'Mosh' then add a comma and then another KEY VALUE PAIR
+        // so now we have a PERSON OBJECT with TWO PROPERTIES OR TWO KEY VALUE PAIRS
+
+
+        let person = {
+            name: 'Mosh',
+            age: 30
+        };
+
+        // now lets log the person on the console
+
+        console.log(person);
+
+        // in the console, we get the       > {name: 'Mosh', age: 30}
+        // note the LITERAL SYNTAX
+        // we have two KEY VALUE PAIRS and these are the properties of the person object
+
+        // now there are two ways to access and change the name of the person
+
+        // 1st way DOT NOTATION
+        person.name = 'John';
+        console.log(person.name);           // now in the console we get John
+
+        // 2nd way BRACKET NOTATION
+        // so we use [] square brackets and we pass the name of the TARGET PROPERTY
+
+        let person = {
+            name: 'Mosh',
+            age: 30
+        };
+
+        // DOT NOTATION                     // more concise, shorter thus its our default choice
+        person.name = 'John';
+
+        // Bracket Notation                 // but sometimes you dont know the name to the TARGET PROPERTY UNTIL RUN TIME
+        person['name'] = 'Mary'
+
+        console.log(person.name);           // we get Mary in the console 
+
+        // but sometimes you dont know the name to the TARGET PROPERTY UNTIL RUN TIME
+        // for example in the user interface, the user might be selecting the name of the target property
+        // thus in that case, at the time of writing code we dont know the name of the property the user will access as
+        // this is selected at run time by the user.  So we might have another variable somewhere else like SELECTION
+        // that determines the name of the target property that the user is selecting and this can change at run time.
+        // Now with this, we can access that property using the bracket notation in a DYNAMIC WAY
+        // so we pass selection here and we get the same result.        <<<<<SAME RESULT<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+        let person = {
+            name: 'Mosh',
+            age: 30
+        };
+
+        // DOT NOTATION
+        person.name = 'John';
+
+        // Bracket Notation
+        let selection = 'name';             // add selection to represent user selection and then
+        person[selection] = 'Mary'          // add selection inside the bracket notation.
+
+        console.log(person.name);           // we get Mary in the console. <<<<<SAME RESULT<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+// Arrays           we cover Arrays in 6 ARRAYS
+
+        // somethimes you have a list of something
+
+        let selectedColors = [];        // initialize this with an ARRAY LITERAL and the [] square brackets indicate an empty array.
+
+        let selectedColors = ['red', 'blue'];        // initialize this and add items red and blue
+
+        // lets log this the console...
+
+        let selectedColors = ['red', 'blue'];
+        console.log(selectedColors);                // console shows ['red', 'blue']
+
+        /*
+        (2) ['red', 'blue']
+        0: "red"                    // index of 1st element is 0
+        1: "blue"                   // index of 2nd element is 1 so if we want to access an element in the array, we use this index
+        length: 2
+        [[Prototype]]: Array(0)
+        */
+
+        // to specify the 1st value in the array, we add the [] square brackets and the index #
+
+        let selectedColors = ['red', 'blue'];
+        console.log(selectedColors[0]);             // in the console we get red
+
+        // remember that earlier I said: 
+        // JavaScript is a dynmaic language so the variables can change at run time. 
+        // The same principles apply to our arrays.
+        // So the length of an array as well as the types of objects we have in the array are dynamic (ie they can change).
+
+        let selectedColors = ['red', 'blue'];
+        console.log(selectedColors[0]);
+
+        // we add another element to this array so the array will expand like this
+
+        let selectedColors = ['red', 'blue'];
+        selectedColors[2] = 'green';
+        console.log(selectedColors);            // console shows  ['red', 'blue', 'green']
+
+        // so now we an array with 3 elements
+        // so the length is dynamic
+        // also the type of objects we have in this array is also dynamic. So we can make the last element now a number
+        // thus we have two strings and a number
+
+        let selectedColors = ['red', 'blue'];
+        selectedColors[2] = 12;
+        console.log(selectedColors);            // console shows  ['red', 'blue', 12]
+
+        // so the objects in the array as well as the size of the array are dyanmic.
+
+        // now techically the array is an object, so we can use the key value and dot notation.
+        // in the console
+        > typeof selectedColors
+        > 'object'      // so the typeof this array is an object
+
+
+        let selectedColors = ['red', 'blue'];
+        selectedColors[2] = 12;
+        console.log(selectedColors.);            // console shows  ['red', 'blue', 'green']
+        //                        ^ using the dotation offer many properties to choose from INHERITANCE from PROTOTYPES
+
+
+        let selectedColors = ['red', 'blue'];
+        selectedColors[2] = 12;
+        console.log(selectedColors.length);         // now lets look a the length property which returns a 3 in the console
+        // so here we learn an array a data structure that we use to represent a list of items.
+
+
+// Functions        we cover Functions in 7 FUNCTIONS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Objects          we cover Objects after 4 CONTROL FLOW, 5 OBJECTS
+    /*
+    Basics
+    Factory Functions
+    Constructor Functions
+    Dynamic Nature of Objects
+    Constructor Property
+    Functions are Objects
+    Value vs Reference Types
+    Enumerating Properties of an Object
+    Cloning an Object
+    Garbage Collection
+    Math
+    String
+    Template Literals
+    Date
+    Exercise 1 - Address Object
+    Exercise 2 - Factory and Constructor Functions
+    Exercise 3 - Objet Equality
+    Exericse 4 - Blog Post Object
+    Exercise 5 - Constructor Functions
+    Exercise 6 - Price Range Object
+    Quick Note
+    */
+
+// Arrays           we cover Arrays in 6 ARRAYS
+    /*
+    Introduction
+    Adding Elements
+    Finding Elements (Primitives)
+    Finding Elements (Reference Types)
+    Arrow Functions
+    Removing Elements
+    Empyting an Array
+    Combining and Slicing Arrays
+    Spread Operator
+    Iterating an Array
+    Joining an Array
+    Sorting an Array
+    Testing the Elements of an Array
+    Filtering an Array
+    Reducing an Array
+    Exercise 1 - Array from Range
+    Exercise 2 - Includes
+    Exercise 3 - Except
+    Exercise 4 - Moving an Element
+    Exercise 5 - Count Occurrences
+    Exercise 6 - Get Max
+    Exercise 7 - Movies
+    */
+
+// Functions        we cover Functions in 7 FUNCTIONS
+    /*
+    Function Declarations vs Expressions
+    Hoisting
+    Arguments
+    Rest Operator
+    Default Parameters
+    Getters and Setters
+    Try and Catch
+    Local vs Global Scope
+    Let vs Var
+    this Keyword
+    Changing this
+    Exercise 1 - Sum of Arguments
+    Exercise 2 - Area of Circle
+    Exercise 3 - Error Handling
+    Wrap Up
+    Whats Next (Part 2 JavsScript Course)
+    */
+
+
+
+
+
+
+
+
+// =========================================================
+// =========================================================
+// =========================================================
+// =========================================================
+// =========================================================
+// =========================================================
+// =========================================================
+// =========================================================
+// =========================================================
+
+
+
+
+
+// Divisible by 5 => Buzz
+// Divisible by both 3 and 5 ==> FizzBuzz
+// Not divisible by 4 or 5 ==> input
+// Not a number ==> 'Not a number'
+
+const output = 3;
+console.log(output);
+
+
+============================================================
+
+//=========================================================================
+// [4] CONTROL FLOW
+//=========================================================================
+
+//=========================================================================
+// [4] CONTROL FLOW #1 If ... else
+// Problem Set
+// Hour
+// Depending upon its value, we greet the user with different message
+//      if hour is between 6am and 12pm, display Goor morning!
+//      if hour is between 12pm and 6pm, display Good afternoon!
+//      otherwise: Good evening!
+// Now need this logic so use        if... else
+if (condition)                  // if the condition evaluates to true, then the statement after will be executed
+    statement
+
+if (condition) {                // if have multiple statements to be executed, then put them inside a "block of code" using curly brackets 
+    statement
+}
+else if (anotherCondition)      // if have another condition then use else if with anotherCondition and then the statement
+    statement 
+
+else if (yetAnotherCondition)   // yet another condition. Can has as many conditions as needed
+    statement
+// now if none of the above statements evaluates to true then we can use else to execute one or more statements
+else 
+    statement
+
+// Now take this logic and map into this structure. 
+//      if hour is between 6am and 12pm, display Goor morning!
+//      if hour is between 12pm and 6pm, display Good afternoon!
+//      otherwise: Good evening!
+
+// condition is         if hour is between 6am and 12pm
+// statement is         display Goor morning!
+
+so let hour = 10;       // in real world application we would want to read the current hour, but here lets not worry about that
+                        // so we hard code this number 10
+// so we want to compare the value of hour 10 with 6am and 12pm
+// for simplicity lets go with 24 hour time format
+
+
+
+
+
+
+
+
+
+
+//=========================================================================
+
+// [4] CONTROL FLOW #12 Exercise 4 FizzBuzz
+// FizzBuzz
+
+// LOGIC
+// Divisible by 3 => Fizz
+// Divisible by 5 => Buzz
+// Divisible by both 3 and 5 ==> FizzBuzz
+// Not divisible by 3 or 5 ==> input
+// Not a number ==> return 'Not a number' NaN
+// pass false in 
+// typeof NaN
+ 
+const output = 3;
+console.log(output);
+
+// if typeof input is not a number then return 'Not a number'
+// use typeof
+
+// if input % 3 === 0 return Fizz
+// if input % 5 === 0 return Buzz
+// if input % 3 && % 5 return FizzBuzz
+// () && ()
+// return input
+// hint watch ordering of if statements. Move && up using ALT Up Arrow
+
+//=========================================================================
+// [4] CONTROL FLOW #13 Exercise 5 Demerit Points
+
+// LOGIC
+// Speed Limit = 70
+// 5 -> 1 point
+// use Math.floor(1.3)  -> 1        Floating Point Numbers
+// 12 points -> license suspended
+
+// create function checkSpeed
+// define a const speedLimit = 70
+// tip test your function with different values
+
+// call the function
+checkSpeed(70);
+
+function checkSpeed(speed) {
+}
+// bug speed at 70, add in =
+
+// tip avoid indentation if you can b/c then may need to scroll left right
+//     so add a code block {}, move up code into the block, and add a return to
+//     jump out of the function thus none of the rest of the code gets executed
+//     thus able to delete the else statement, and remove the indentation
+
+//=========================================================================
+// [4] CONTROL FLOW #14 Exercise 6 Even Odd Numbers 
+// LOGIC
+
+showNumbers(10);
+function showNumbers(limit)
+//
+
+//=========================================================================
+// [4] CONTROL FLOW #15 Count Truthy takes an array and returns the number of truthy values in the array
+// LOGIC
+// call countTruthy, pass this array, count the number of truthy values, and immediately pass the result to console.log
+
+
+
+//=========================================================================
+// [4] CONTROL FLOW #16 Exercise 1 Max of Two Numbers
+//=========================================================================
+// [4] CONTROL FLOW #16 Exercise 2 Landscape or Portrait
+//=========================================================================
+// [4] CONTROL FLOW #16 Exercise 3 FizzBuzz
+//=========================================================================
+// [4] CONTROL FLOW #16 Exercise 4 Demerit Points
+//=========================================================================
+// [4] CONTROL FLOW #16 Exercise 5 Even and Odd Numbers
+//=========================================================================
+// [4] CONTROL FLOW #16 Exercise 6 String Properties
+
+
+//=========================================================================
+
+// [4] CONTROL FLOW #16 Exercise 7 String Properties
+// LOGIC
+// showProperties(obj)
+// pass this function an object and this function should display all the properties of the object that are of type string
+
+const movie = {
+    title: 'a',
+    releaseYear: 2018,
+    rating: 4.5,
+    director: 'b'
+};
+
+showProperties(movie);      // call the function showProperties and pass in the movie object, lets see what we get. Output shows two strings
+
+function showProperties(obj) {
+    for (let key in obj)
+    console.log(key);
+    // check the type of key
+    // then display all the properties of the obj that are of type string
+}
+
+// use the For...in loop to iterate over the object
+// in each iteration the key will hold that name of the property
+
+// to get the value of each property using [] notation
+// use typeof operator and put into if statement
+
+function showProperties(obj) {
+    for (let key in obj)
+        obj[key]           // to get the value of each property using [] notation so type in obj[key]
+}
+
+                            // to check the type of this value, use the typeof operator
+                            // then put into an if statement
+                            // so then if the typeof obj of key === 
+                            // 'string'
+                            // then simply display console.log of key as well as object of key
+
+function showProperties(obj) {
+    for (let key in obj)
+        if (typeof obj[key] === 'string')           // to get the value of each property using [] notation
+            console.log(key, obj[key]);             // then simply display console.log of key as well as object of key
+}
+
+// save the changes
+// and should yield the title and director properties along with their values
+
+// note we dont use {} as part of the for statement b/c we only have a single statement under the for statement
+// why? the if statement and console.log statement is really one statement.// but can use {} as its perfectly fine.
+
+
+//=========================================================================
+// [4] CONTROL FLOW #17 Exercise 8 Sum of Multiples 3 and 5
+// LOGIC
+
+// returns the sum of all the multiples of 3 and 5 up to the limit
+// example limit is 10
+// Mutiples of 3: 3, 6, 9
+// Multiples of 5: 5 + 10
+// Sum = 33
+
+console.log(sum(10));
+
+function sum(limit) {
+
+}
+
+// start with a for loop
+// let i = 0 as long as i is less than or equal to limit, then increment i
+// now we check to see if i is a mulitple of 3 of 5
+
+function sum(limit) {
+    for (let i = 0; i <= limit; i++)        
+}
+
+// now we check to see if i is a mulitple of 3 of 5
+// so if i moduls 3 equals 0 
+// or
+function sum(limit) {
+    for (let i = 0; i <= limit; i++)        
+        if (i % 3 === 0 )
+}   
+
+// or i modulus 5 equals 0 
+function sum(limit) {
+    for (let i = 0; i <= limit; i++)        
+        if (i % 3 === 0 || i % 5 === 0)
+}   
+
+
+// now we need take i and add it to our sum
+// here we need to declare a variable
+// let sum = 0;
+// and if i is a multiple of 3 or 5 then add i to sum
+function sum(limit) {
+    let sum = 0;
+
+    for (let i = 0; i <= limit; i++)        
+        if (i % 3 === 0 || i % 5 === 0)
+
+}   
+
+
+// and if i is a multiple of 3 or 5 then add i to sum
+function sum(limit) {
+    let sum = 0;
+
+    for (let i = 0; i <= limit; i++)        
+        if (i % 3 === 0 || i % 5 === 0)
+            sum += i;
+}
+
+
+// and if i is a multiple of 3 or 5 then add i to sum
+// and finally, return sum;
+function sum(limit) {
+    let sum = 0;
+
+    for (let i = 0; i <= limit; i++)        
+        if (i % 3 === 0 || i % 5 === 0)
+            sum += i;
+
+    return sum;
+}
+
+
+// Mutiples of 3: 3, 6, 9
+// Multiples of 5: 5 + 10
+// Sum = 33
+function sum(limit) {
+    let sum = 0;                                // initialization
+
+    for (let i = 0; i <= limit; i++)            // logic
+        if (i % 3 === 0 || i % 5 === 0)
+            sum += i;
+
+    return sum;                                 // return
+}
+
+// pay attention to how seperated (line breaks) this code: initialization, logic, return
+// if didnt do this then the code looks squashed, hard to read
+function sum(limit) {
+    let sum = 0;
+    for (let i = 0; i <= limit; i++)        
+        if (i % 3 === 0 || i % 5 === 0)
+            sum += i;
+    return sum;
+}
+
+// tips
+// always have last line seperated 
+// keep logic together
+
+
+
+//=========================================================================
+// [4] CONTROL FLOW #18 Exercise 9 Grade
+// LOGIC
+
+const marks = [80, 80, 50];
+
+// Average = 70
+
+
+// 0-59: F
+// 60-69: D
+// 70-79: C
+// 80-89: D
+// 90-100: A
+
+console.log(calculateGrade(marks));
+
+function calculateGrade(marks) {
+
+}
+
+// first calculate avg mark
+// to do this, need to declare variable sum, initialize it to 0
+// then use for of loop to iterate this array of marks, and calculate the sum of all
+// so let mark of marks 
+// then add it to sum so sum += mark
+// so this is the total
+// so need to get the avg
+// then use the table to get the grade.
+
+function calculateGrade(marks) {
+    let sum = 0;
+    for (let mark of marks)
+        sum += mark;
+        let average = sum / marks.length;
+
+        if (average < 60) return 'F';
+        if (average < 70) return 'D';
+        if (average < 80) return 'C';
+        if (average < 90) return 'B';
+        return 'A';        
+}
+
+
+// checking the upper limit each time
+if (average < 60) return 'F';
+if (average < 70) return 'D';
+if (average < 80) return 'C';
+if (average < 90) return 'B';
+return 'A';
+
+// SINGLE RESPONSIBILITY PRINCIPLE --> restaurant, chef only resp for cooking, manager only resp for managing the rest
+// have functions that are small and only focused on one thing
+// here
+// first part is about calculating avg in an array
+// second part is about calculating grade
+
+function calculateGrade(marks) {
+    let sum = 0;
+    for (let mark of marks)
+        sum += mark;
+        let average = sum / marks.length;
+}
+
+
+function calculateAverage(array) {
+    let sum = 0;
+    for (let value of array)
+        sum += value;
+        let average = sum / array.length;
+        return average;
+}
+
+
+
+
+
+// now we have two very simple functions and 
+// each functions is responsible for only one thing
+
+function calculateGrade(marks) {
+    const average = calculateAverage(marks);
+    if (average < 60) return 'F';
+    if (average < 70) return 'D';
+    if (average < 80) return 'C';
+    if (average < 90) return 'B';
+    return 'A';
+}    
+
+function calculateAverage(array) {
+    let sum = 0;
+    for (let value of array)
+        sum += value;
+    return sum / array.length;      // even simplier vs above block
+}
+
+
+
+//=========================================================================
+// [4] CONTROL FLOW #19 Exercise 10 showStars
+// given
+showStars(10);
+
+function showStars(rows){
+
+}
+
+// output
+// *
+// **
+// ***
+// ****
+// *****
+// ******
+// *******
+// ********
+// *********
+// **********
+
+// LOGIC
+// let max = 10;
+// for (i = 0; i <= max; i++)
+//      console.log
+
+function sum(limit) {
+    let sum = 0;
+    for (let i = 0; i <= limit; i++)        
+        if (i % 3 === 0 || i % 5 === 0)
+            sum += i;
+    return sum;
+}
+
+// MOSH
+// start with for loop
+// we set this row to 1, as long as row is <= rows, we increment row and pattern starts empty
+// 
+// now in each row, depending on the # of rows, we need to display the number of stars
+// so here lets declare a variable called pattern and set to an empty string
+// so now depending on the value of the row, we need to add one or more stars to the pattern
+// so need another for loop, for let i = 0, as long as i is < row, increment i++
+// add here we add a * to the pattern
+//      NEED A NESTED LOOP
+//      so 2nd for loop will start at 0 and we run this while i is less than row, and each time we append one star to the empty string pattern
+//      when we are done with each iteration, we console.log that existing pattern
+
+showStars(10);
+
+function showStars(rows) {
+    for (let row = 1; row <= rows; row++) {
+        let pattern = ''; 
+        for (let i = 0; i < row; i++)
+            pattern += '*';
+        console.log(pattern);
+    }
+}
+
+
+//=========================================================================
+// [4] CONTROL FLOW #20 Exercise 10 Prime Numbers
+
+// output
+// 2
+// 3
+// 5
+// 7
+// 11
+// 13
+// 17
+// 19
+
+// given 
+// Prime (whose factors are only 1 and itself)
+// 11 = 1, 11
+// 13 = 1, 13
+// Composite
+// 12 = 1, 2, 3, 4, 6, 12
+
+showPrimes(20);
+
+function showPrimes(limit)
+
+// LOGIC
+
+
+
+
+
+
+
+//=========================================================================
+
+
