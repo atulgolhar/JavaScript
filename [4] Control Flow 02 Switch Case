@@ -1,0 +1,31 @@
+/*
+role is the current user but is the current user an admin or user?
+use Switch Case here
+switch (variable) {}
+switch (role) {}          role is the variable here
+add one or more case statements
+add the break statement so we jump out of the case block
+
+*/
+
+let role = 'guest';
+
+switch (role) {        
+  case 'guest': 
+    console.log('Guest User');
+    break;
+
+  case 'moderator': 
+    console.log('Moderator User');
+    break;
+  
+  default: 
+    console.log('Unknown User');
+}
+
+
+// alternative code - cleaner
+
+if (role === 'guest') console.log('Guest');
+else if (role === 'moderator') console.log('Moderator');
+else console.log('Unknown User');
