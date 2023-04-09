@@ -1,5 +1,22 @@
+/*
+<!DOC TYPE ?????
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World from Needham MA</h1>
+    <script src="index.js"></script>
+</body>
+</html> 
+
+</meta> Divisible by 3 => Fizz
+*/
+
 // =========================================================
-// BASICS
+// [1] BASICS
 // =========================================================
 // 1 VARIABLES
 let name;
@@ -472,7 +489,7 @@ console.log(square(2));
 
 
 // =========================================================
-OPERTATORS
+[3] OPERTATORS
 
 
 // =========================================================
@@ -621,61 +638,490 @@ let x = 1;
 // Relational Operators
 console.log(x > 0);       // true. comparison operator here. Result is a Boolean. Its true or false.
 console.log(x >= 1);      // true.
-console.log(x < 1);       // true. 
+console.log(x < 1);       // false 
 console.log(x <= 1);      // true.
 
 // ==================
 
 
-// ==================
+
+
+let x = 10;
+let y = x++;
+
+console.log(y);     // 10 why? b/c y is assigned x then x is iterated.
+console.log(x);     // 11 why? b/c x is iterated then stored in memory.
+
+
+
+
+
+// 5 Equality Operators
 
 // ==================
 
-// ==================
+// Strict Equality Operator (assume both )
+console.log(1 === 1 );
+
+// Loose Equality Operator
+console.log(1 == 1 );
 
 // ==================
 
-// ==================
+// what is the difference? (strict has three equals signs) (loose has two equal signs)
 
-// ==================
+// Strict Equality Operator (Same Type and Same Value)
+// Strict Equality Operator (assumes both Same Type and Same Value)
 
-// ==================
+console.log(1 === 1 );
 
-// ==================
-
-// ==================
-
-// ==================
-
-// ==================
-
-// ==================
-
-// ==================
-
-// ==================
+// Loose Equality Operator
+console.log(1 == 1 );
 
 // ==================
 
 
+// what is the difference?
+
+// Strict Equality Operator (Same Type and Same Value)
+console.log(1 === 1 );        // number vs number
+console.log('1' === 1 );      // string vs number
+
+// Loose Equality Operator
+console.log(1 == 1 );
+
+// ================== 
+
+// to focus on this, I will comment out these lines
+
+// what is the difference?
+
+// Strict Equality Operator (Same Type and Same Value)
+// console.log(1 === 1);        // number vs number
+// console.log('1' === 1);      // string vs number
+
+// Loose Equality Operator
+console.log(1 == 1);            // true
+console.log('1' == 1);          // true
+
+// why true. left side string, so automaticallly converts on right side to a string
+console.log('1' == '1');
+// thus you get true on the console
 
 
+// ==================
+
+// what is the difference?
+
+// Strict Equality Operator (Same Type and Same Value)
+// console.log(1 === 1);        // number vs number
+// console.log('1' === 1);      // string vs number
+
+// Loose Equality Operator
+console.log(1 == 1);            // true
+console.log('1' == 1);          // true
+console.log(true == 1);          // true
 
 
+// why true. left side string, so automaticallly converts on right side to a string
+console.log('1' == '1');
+// thus you get true on the console
+
+// why true? same thing. left side a Boolean and this will convert the right side to a Boolean as well
+// so its like comparing true with true:
+
+console.log(true == 1);          // true
+console.log(true == true);       // true
 
 
+// ==================
 
+// Strict Equality Operator (Same Type and Same Value) --> more precise and accurate
+console.log(1 === 1);        // number vs number
+console.log('1' === 1);      // string vs number
 
+// Loose Equality Operator   (Value)
+// (Does NOT care about the types matching. 
+// If the types dont match then it will convert the type on the right TO MATCH what ever is on the left side).
+// And then it will only check if the values are equal.
 
+console.log(1 == 1);            // true
+console.log('1' == 1);          // true
+console.log(true == 1);          // true
 
+// ==================
 
+// 6 Ternary Operators (or Conditional Operators)
 
+// explained (given a condition) ? itsthis otherwise itsthat
+// ? "means if that condition evaluates to true" then its the first thing otherwise its the second thing
 
+// ==================
 
+// If customer more than 100 points, they are a 'gold' customer
+// otherwise they are silver.
 
+// track the points
+let points = 90;
+//         CONDITION                            start with a condition
+//         ____________                         
+//                      _                       if that condition evaluates to true
+//                        ______                that customer is a gold customer
+//                               _              otherwise
+//                                 ________     that customer is a silver customer
+let type = points > 100 ? 'gold' : 'silver';
+
+console.log(type);                              // gold
+
+// let points = 90;                             // silver
+
+// ==================
 
 // 7 Logical Operators
+
+// ==================
+
+// use these to make decisions based upon multiple conditions
+// JavaScript has 3 types of operators: logical and, logical or, logical not
+//                                      &&           ||
+
+// Logical AND (&&)
+// Returns TRUE if both operands ae TRUE
+console.log(true && true);              // true
+
+console.log(false && true);             // false
+
+// Real world use case for this?
+// build application for approving loans. If applicant has high income + good credit score
+
+// ==================
+
+let highIncome = true;
+let goodCreditScore = true;
+
+// so we are dealing with two conditions.
+// so we can use the Logical AND
+
+let highIncome = true;
+let goodCreditScore = true;
+let eligibleForLoan = highIncome && goodCreditScore;
+//                    true       && true            --> both true so TRUE
+
+// ==================
+
+let highIncome = true;
+let goodCreditScore = true;
+let eligibleForLoan = highIncome && goodCreditScore;
+
+console.log(eligibleForLoan);                         // true
+
+
+// ==================
+
+
+
+// Logical OR (||)
+// Returns TRUE if one of the operands is TRUE
+let highIncome = true;
+let goodCreditScore = true;
+let eligibleForLoan = highIncome || goodCreditScore;
+
+console.log(eligibleForLoan);                         // true
+
+
+// ==================
+
+let highIncome = false;         // <<<<<<<<<<<<<<<<<<<<<<<<CHANGE
+let goodCreditScore = true;
+let eligibleForLoan = highIncome || goodCreditScore;
+
+console.log(eligibleForLoan);                         // true
+
+// ==================
+
+
+// Logical OR (||)
+
+// Returns TRUE if one of the operands is TRUE
+let highIncome = true;
+let goodCreditScore = false;     // <<<<<<<<<<<<<<<<<<<<<<<<CHANGE
+let eligibleForLoan = highIncome || goodCreditScore;
+
+console.log(eligibleForLoan);                         // true
+
+// ==================
+
+// Logical OR (||)
+// Returns TRUE if one of the operands is TRUE
+let highIncome = false;                 // <<<<<<<<<<<<<<<<<<<<<<<<CHANGE
+let goodCreditScore = false;            // <<<<<<<<<<<<<<<<<<<<<<<<CHANGE
+let eligibleForLoan = highIncome || goodCreditScore;
+
+console.log(eligibleForLoan);                         // false  // <<<<<<<<<<<<<<<<<<<<<<<<CHANGE
+
+// ==================
+
+
+// NOT Operator
+let highIncome = false;
+let goodCreditScore = true;
+let eligibleForLoan = highIncome || goodCreditScore;
+
+// NOT (!)
+let applicationRefused = !eligibleForLoan;             // note that you apply the NOT operator on the eligibleForLoan Boolean
+
+console.log(eligibleForLoan);                         // true
+console.log(applicationRefused);                      // false
+
+// Logic - b/c if someone is eligible for a loan, then we DONT want to refuse their application.
+
+
+// ==================
+
+
+// Thus this person has low income and bad credit score.
+
+let highIncome = false;
+let goodCreditScore = false;
+let eligibleForLoan = highIncome || goodCreditScore;
+console.log('Eligible', eligibleForLoan);
+
+// NOT (!)
+let applicationRefused = !eligibleForLoan;
+console.log('Application Refused', applicationRefused);
+
+
+/*
+Eligible false
+Applicaiton Refused true
+*/
+
+// ==================
+
+
+// 8 Logical Operators with Non-booleans
+
+// ==================
+
+// JavaScript offer NonBoolean operators to be used with Boolean operators
+// Extremely powerful --> TRUTHY and FASLY
+// JavaScript engine will look at the boolean expression and try to interpret it
+
+/*
+false || true       // true 
+false || 'Mosh'     // 'Mosh'               
+false || 1          //1                   */
+
+// ==================
+
+// Falsy (false)
+// undefined      
+// null   
+// 0        
+// false    
+// ''       empty string
+// NaN      Not a Number
+
+// Anything that is not Falsy --> Truthy
+
+// ==================
+
+// so here our second OPERAND is a string wtih 4 characters. 
+// SO THIS IS NOT AN EMPTY STRING, so its not falsy, thus it is TRUTHY
+
+// false || 'Mosh'     // 'Mosh' 
+
+// so when our JavaScript engine tries to evalate this, 
+// it looks at the first operand, it is false, so the search continues
+// b/c with the logical or operator
+// as you learned in the last lecture
+// b/c one of the operands is TRUE thus the result will be TRUE.
+
+// ==================
+
+// The same is here for the 3rd example. 
+// The 1 is a not a boolean true, rather it is truthy, and that is why the value 
+// of this operand is returned
+
+
+// false || 1           // 1
+
+
+// ==================
+
+// false || 1 || 2      // 1
+
+// This returns 1
+// The logical OR operator.
+// The evaluation starts here, and as soon as we find an operand that is truthy, then that operand is returned.
+// So here the second operand is truthy, its value is returned, and thus the evaluation stops. The evaluation does
+// not continue onto the 3rd operand. There could be a million other operands, but they are all ignored once the 
+// evaluation finds a trthy operand.
+// This is what we all SHORT CIRCUTING.
+
+// Short-curcuiting
+
+// Real world example
+// Building an application. User needs to pick a color otherwise we use a default color.
+
+// ==================
+
+let userColor = 'red';
+let defaultColor = 'blue';
+let currentColor = userColor || defaultColor;   // if user gives a color choice otherwise defaultColor
+
+console.log('currentColor is ' + currentColor);      // red
+console.log('userColor is ' + userColor);
+
+/*
+let userColor;                  // undefined
+console.log(currentColor);      // blue
+
+let userColor = '';             // screen is blank
+console.log(currentColor);      // blue
+
+let userColor = undefined;      // undefined
+console.log(currentColor);      // blue
+
+let userColor = '3';
+console.log(currentColor);      // 3 (wrong, input validation needed)
+*/
+
+
 // 9 Bitwise Operators
+
+// similiar to logical operators but they work in the individual bits
+
+// 1 = 00000001
+// 2 = 00000010
+// 3 = 00000011
+
+
+// Bitwise OR  
+console.log(1 | 2);     // 3
+// why? 1st digit 1 or 0 yields 1, 2nd digit 0 or 1 yields 1. 
+// Thus 1st digit is 1, 2nd digit is 1 thus 00000011 which is 3
+
+// Bitwise AND
+console.log(1 & 2);     // 0
+// 1st digit: 1 & 0 is 0
+// 2nd digit: 0 & 1 is 0
+// thus 1st digit is 0 and 2nd digit is 0 thus its 00000000 which translates to 0.
+
+// ==================
+
+// 1 = 00000001
+// 2 = 00000010
+// 3 = 00000011
+
+// Read, Write, Execute
+// 00000 1 0 0     Read only
+// 00000 1 1 0     Read and Write
+// 00000 1 1 1     Read, Write, Execute
+
+const readPermission = 4;
+const writePermission = 2;
+const executePermission = 1;
+
+/*        1 2 3 4 5 6 7 8 <----digit
+1	1       0 0 0 0 0 0 0 0 <----1 
+2	10      0 0 0 0 0 0 0 1 <----2
+3	11      0 0 0 0 0 0 1 0 <----3
+4	100     0 0 0 0 0 1 0 0 <----4        <---- Read Only             4
+5	101     0 0 0 0 0 1 0 1 <----5 
+6	110     0 0 0 0 0 1 1 0 <----6        <---- Read Write            2
+7	111     0 0 0 0 0 1 1 1 <----7        <---- Read Write Execute    1
+8	1000    0 0 0 0 1 0 0 0 <----8
+9	1001    0 0 0 0 1 0 0 1 <----9
+10	1010  0 0 0 0 1 0 1 0 <----10
+*/
+
+let myPermission = 0;
+myPermission = myPermission | readPermission | writePermission;   // 0 + 4 + 2
+console.log(myPermission);                                        // 6
+
+
+// ==================
+
+let myPermission = 0;
+myPermission = myPermission | readPermission | writePermission;   // 0 + 4 + 2
+
+let message = 
+  (myPermission & readPermission) ? 'yes' : 'no';
+  console.log(message);     // yes
+
+
+// ==================
+
+let myPermission = 0;
+myPermission = myPermission | writePermission;   // 0 + 2
+
+let message = 
+  (myPermission & readPermission) ? 'yes' : 'no';
+  console.log(message);     // no  
+  
+// why no? notice that myPermission only has a 0 and a Write. this is also 0 + 2. Not a read (which would be a 4).
+// Thus MyPermission & readPermission       evaluates to NO.
+
+// ==================
+
+let myPermission = 0;
+myPermission = myPermission | readPermission | writePermission;   // 0 + 4 + 2
+
+let message = 
+  (myPermission & executePermission) ? 'yes' : 'no';
+  console.log(message);     // no
+
+/*
+So what is important here? 
+With the BitWise OR Permission we can add permissions.
+With the Bitwise AND Permission we can check to see if we have a given permission.
+*/
+
+// ==================
+
+
+// 10 Operators Precedence          + 1 * / % ** 
+
+// 11 Quiz
+
+// 12 Exercise Swapping Variables
+
+// Swap Variable Colors
+
+let a = 'red';
+let b = 'blue';
+
+console.log('Original a = ' + a);
+console.log('Original b = ' + b);
+
+let c = a;        // c = 'red' thus both c and a are BOTH red and now can update a to new color
+a = b;            // a = takes on b color of 'blue'
+b = c;            // b = takes on c color
+
+console.log('Swapped: a = ' + a);
+console.log('Swapped: b = ' + b);
+
+
+
+// ==================
+
+// ==================
+
+// ==================
+
+// ==================
+
+// ==================
+
+// ==================
+
+// ==================
+
+// ==================
+
+// ==================
+
 
 
 
