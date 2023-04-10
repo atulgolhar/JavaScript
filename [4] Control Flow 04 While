@@ -1,0 +1,18 @@
+
+// so direct translation of for loop --> while loop
+
+for (let i = 0; i <= 5; i++) {
+  if (i % 2 !== 0) console.log('Even', i);
+}
+
+let i = 0;
+while (i <= 5) {
+  if (i % 2 !== 0) console.log('Even', i);  
+  i++
+}
+
+// note the difference, 
+// difference#1 INITIAL EXPRESSION is defined outside the while loop
+// difference#2 increment is at the bottom of the while loop
+
+
