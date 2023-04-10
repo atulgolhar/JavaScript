@@ -1,0 +1,76 @@
+// write function that takes two numbers and returns the max of the two.
+
+let number = max(3,3);
+console.log(number);
+
+function max(a, b) {
+  if (a > b) return a;
+  else return b;
+}
+
+/*
+start by defining a function
+call it max
+need two parameters number 1 and number 2
+function max(number1, number2)
+need some logic to compare the value of number1 with number2
+call the numbers a and b for simplicity
+so use an if statement
+if (a > b) return a;
+else return b;
+
+before going any further, lets make sure this function actually works
+let number = max(1,2);
+
+clean up code
+remove else keyword
+why? b/c if a>b we will jump out of this function and thus none of the code after line 7 will be executed.
+*/
+
+let number = max(3,3);
+console.log(number);
+
+function max(a, b) {
+  if (a > b) return a;
+  //...
+  else return b;
+}
+
+// so this is a clean implementation
+
+let number = max(3,3);
+console.log(number);
+
+function max(a, b) {
+  if (a > b) return a;
+  return b;
+}
+
+// now what? we can make this even cleaner
+// using the conditional operator
+// the ternary operator
+
+(condition) ? 'this' : 'that'
+
+// what is the condition? 
+(a > b) ? a : b
+
+// if the condition is true, we return a, otherwise we return b
+// now all we need is a return statement and terminate with ;
+return (a > b) ? a : b;
+
+function max(a, b) {
+  if (a > b) return a;          // can remove
+  return b;                     // can remove
+}
+
+return (a > b) ? a : b;         // replace with this
+
+// so we have
+
+let number = max(3,3);
+console.log(number);
+
+function max(a, b) {
+  return (a > b) ? a : b;
+}
