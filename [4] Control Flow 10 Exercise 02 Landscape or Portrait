@@ -1,0 +1,15 @@
+
+function isLandscape(width, height) {
+  // width > height = landscape
+  // otherwise portrait
+}
+
+// isLandscape true or false
+// isLandscape returns true if w > h
+// isLandscape returns false if w < h
+
+console.log(isLandscape(100, 300));
+
+function isLandscape(width, height) {
+  return (width > height);
+}
