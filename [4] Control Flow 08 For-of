@@ -28,3 +28,13 @@ for (let color of colors)
 // red         // same output
 // green
 // blue
+
+
+// Summary
+// for-in - to iterate over the properties of an object
+for (let key in colors)
+  console.log(colors[key]);   // YES need to use index to access the element
+
+// for-of - to iterate over the items in an array
+for (let color of colors)           
+  console.log(color);         // NO need to use index to access the element
