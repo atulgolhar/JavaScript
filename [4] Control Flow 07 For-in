@@ -1,0 +1,30 @@
+
+// for-in
+const person = {
+  name: 'Mosh',
+  age: 30
+}
+
+// for (let key in person)
+//   console.log(key, person[key]);
+
+// ================== Better way to show this with direct comparison
+
+const colors = ['red', 'green', 'blue'];
+
+// for-in
+for (let key in colors)
+  console.log(colors[key]);   // YES need to use index to access the element
+
+// for-of
+for (let color of colors)           
+  console.log(color);         // NO need to use index to access the element
+
+
+
+// red         // same output
+// green
+// blue
+// red         // same output
+// green
+// blue
