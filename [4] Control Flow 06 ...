@@ -1,1 +1,18 @@
 
+let i = 0;                         // condition makes this loop run forever
+while (i < 5) {
+  console.log(i);                  // also no increment makes this loop run forever
+}
+ 
+do {
+  while (true)                    // condition makes this loop run forever
+}
+
+let x = 0;
+do {
+  // x++;                         // commeting out the increment makes loop run forever
+} while (x < 5);
+
+
+for (let i = 0; i > 0; i++)       // condition i > 0 makes this loop run forever
+for (let i = 0; i < 10; )        // condition is ok but forget to add the 3rd part  
