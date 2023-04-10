@@ -1,0 +1,117 @@
+
+// 5 Do while       (executed at least once)
+
+
+for (let i = 0; i <= 5; i++) {
+  if (i % 2 !== 0) console.log('Even', i);
+}
+
+// let i = 0;                                   // comment out this block b/c its interfering with i in do-while loop below
+// while (i <= 5) {
+//   if (i % 2 !== 0) console.log('Even', i);   // borrow this statement and copy below
+//   i++                                        // borrow this statement and copy below
+// }
+
+// ==================
+
+// do-while
+let i = 0;
+do {
+//   if (i % 2 !== 0) console.log('Even', i);  
+//   i++
+} while ()                                      // while statement is added AT END OF THE BLOCK
+
+// ==================
+
+// do-while   
+let i = 0;
+do {
+//   if (i % 2 !== 0) console.log('Even', i);  
+//   i++
+} while (i <= 5) ;                              // adding condition as well
+
+// ==================
+
+// DIFFERENCE between While Loop v Do While Loop
+// Do while executed at least once EVEN IF THE CONDITION evaluates to false.
+
+let i = 0;
+while (i <= 5) {                              // while evalutes to false then enter block is skipped completely
+  if (i % 2 !== 0) console.log('Even', i);  
+  i++
+}
+
+// do-while   
+let i = 0;
+do {                                          // condition gets executed at least ONCE then evaluation occurs.
+//   if (i % 2 !== 0) console.log('Even', i);  
+//   i++
+} while (i <= 5) ;                              // adding condition as well
+
+
+
+// ==================
+
+// order to show on screen
+// FOR
+// WHILE
+// DO-WHILE
+
+// to show students, comment out FOR block and DO-WHILE block then run WHILE only
+
+// for (let i = 0; i <= 5; i++) {
+//   if (i % 2 !== 0) console.log('Even', i);
+// }
+
+let i = 0;
+while (i <= 5) {
+  if (i % 2 !== 0) console.log('Even', i);  
+  i++
+} while (i <= 5) ;
+
+// let i = 0;
+// do {
+//   if (i % 2 !== 0) console.log('Even', i);  
+//   i++
+// } while (i <= 5) ;
+
+// now if change i to 9 then you wont see anything --> b/c the first time we try to execute the while loop, 
+// the condition (i <= 5) evaluates to false so block {} are never executed. Save changes and console is emtpy.
+// thus in While loop, the condition is ***evaluted at the beginning at of the while loop.
+// and thus if the condition is false then the while loop skips the entire code block.
+// In contrast, in Do-While loops, the condition is ***evaluated at the end.
+// Thus if the condition is false, the Do-While still has 1 loop execution. 
+// And all this means the if statement in the Do-While loop is always executed at least ONCE.
+// The While loop has 0 loop execution if the condition is false.
+// The Do-While loop has 1 loop execution if the condition is false. 
+let i = 9;
+while (i <= 5) {
+  if (i % 2 !== 0) console.log('Even', i);  
+  i++
+}
+
+// ==================
+
+// TEST CODE
+
+
+// for (let i = 9; i <= 5; i++) {
+//   if (i % 2 !== 0) console.log('Even', i);
+// }
+
+// let i = 9;
+// while (i <= 5) {
+//   if (i % 2 !== 0) console.log('Even', i);  
+//   i++
+// }
+
+// let i = 9;
+// do {
+//   if (i % 2 !== 0) console.log('Even', i);  
+//   i++
+// } while (i <= 5);
+   
+// i = 9              OUTPUT
+// For            --> no output
+// While          --> no output
+// Do-While       --> Even 9
