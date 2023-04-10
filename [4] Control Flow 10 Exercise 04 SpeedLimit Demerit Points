@@ -1,4 +1,3 @@
-
 checkSpeed(90);
 
 function checkSpeed(speed) {
