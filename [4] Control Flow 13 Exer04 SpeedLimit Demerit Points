@@ -15,3 +15,70 @@ function checkSpeed(speed) {
   else
     console.log('Points', points);
 }
+
+
+
+// LOGIC
+// Speed Limit = 70   Ok on console
+// for 5 above speed limit -> 1 point   if at 72 still good
+// use Math.floor(1.3)  -> 1        Floating Point Numbers
+// 
+// more than 12 points -> license suspended
+
+// create function checkSpeed
+// define a const speedLimit = 70
+// tip test your function with different values
+
+// call the function
+checkSpeed(70);
+
+function checkSpeed(speed) {
+}
+// bug speed at 70, add in =
+
+// tip avoid indentation if you can b/c then may need to scroll left right
+//     so add a code block {}, move up code into the block, and add a return to
+//     jump out of the function thus none of the rest of the code gets executed
+//     thus able to delete the else statement, and remove the indentation
+
+/* LOGIC
+defined function speed
+check if speed is less than 70
+display console.log OK
+avoid magic number 70
+need to define const speedLimit = 70 thus code is more expressive and can use reuse in multiple places
+if speed limit changes tomorrow to 75 or 80 then easy change
+now calculate points
+(speed - speedLimit) / 5 
+dont use magic number 5
+so turn into a constant
+const kmPerPoint = 5
+replace magic number with kmPerPoint
+use Math.floor and as an argument we pass the expression to calcuate the points
+now check to see if driver have more than 12 points
+if points >= 12 then suspend licence
+otherwise display points on console
+change points equation to a const in case we accidently change points
+    for example if points++ will give an error
+if want to reassign a const then use the let keyword
+now lets chek
+on top add checkSpeed(50); save changes and we get ok
+
+bug Speed < SpeedLimit should be Speed <= SpeedLimit
+solves the bug
+try 71 still shows 0 points so still have a bug
+speed < speedLimit + kmPerPoint 
+this solves it b/c now its 70 + any additional points based upon speed
+
+try 75 should get 1 point
+try 77 should still get 1 point
+try 80 we should get 2 points
+try 60 * 5 above speedlimit means 130 kmPerHour
+try 130 works
+
+one last tip
+else block causes indentation left right scrolling
+need to get rid of else block and the indentation
+by adding a return at the if speed < speedLimit + kmPerPoint
+we can then remove the else keyword and remove the indentation
+*/
