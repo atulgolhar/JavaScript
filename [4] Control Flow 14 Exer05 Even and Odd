@@ -1,0 +1,43 @@
+
+showNumbers(10);
+
+function showNumbers(limit) {
+  for (i = 0; i <= limit; i++) {
+    const message = (i % 2 === 0) ? 'EVEN' : 'ODD';
+    console.log(i, message);
+  }
+}
+
+
+// LOGIC
+
+/*
+takes in a parameter called limit
+showNumbers(10);
+function showNumbers(limit)
+and shows all number from 0 to 10 and if they are even or odd like this
+
+0 "EVEN"
+1 "ODD"
+2 "EVEN"
+3 "ODD"
+4 "EVEN"
+...
+10 "EVEN"
+
+use a for loop
+set i variable to 0
+as long as i <= limit
+run loop and increment i
+check the following if i is an even number or not
+then display console.log i and "EVEN"
+otherwise console.log i and "ODD"
+
+another way to write this program
+declare a const message
+declare a condition tenary operator
+i % 2 === 0 this means
+if i is an even number then set it to EVEN
+otherwise set i to "ODD"
+then console.log of i and message
+*/
