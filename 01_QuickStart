@@ -1,1 +1,11 @@
 Gatting back into it... JS
+
+// tbd code snippet
+
+// the method action of another object
+
+console.log(anotherObj.action());
+
+For In Loop			for (let job in band) {
+					console.log('On ${job}, it's ${band[job]}!')
+				};
