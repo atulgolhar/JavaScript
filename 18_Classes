@@ -1,1 +1,10 @@
+NOTES
 
+class Pizza{}
+constructor()
+put properties in now:
+this.size
+this.crust
+put in a method bake()
+inside method console.log with add template literal 			console.log( ${this.size} ${this.crust} );
+this is a blueprint for creating the object
