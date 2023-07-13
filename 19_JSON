@@ -1,1 +1,11 @@
+see myObj as a JSON which is an object
+	// OBJECT = name jobbie property hello function
+create generic sendJSON variable which contains myObj data which is now a string = "stringified it"
+	const sendJSON = JSON.stringify(myObj);
+	// STRING = name property inside quotes, no function send. it discards the function
+	// can not access function using dot notation b/c its a string
 
+	const receiveJSON = JSON.parse(sendJSON);	
+	// parse the string and turn back into an object
+	//can yes access function b/c its a object, but no method
+	// so we lose any method along the way
