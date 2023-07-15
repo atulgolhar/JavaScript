@@ -1,1 +1,4 @@
 
+// Syntax: addEventListener(event, function, useCapture)	
+h2.addEventListener("click", doSomething, false);
+h2.removeEventListener("click", doSomething, false);
