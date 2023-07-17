@@ -1,1 +1,34 @@
 
+https://regexr.com/
+[enl]			[^enl]	selected character set 	negated character set	
+[a-z]/g  [A-Z]/g  [0-9]/g	range in brackets 	\g is the expression flag  
+
+Flags
+g   global      i   case insensitive     m   multiline    s   single line (dotall)    u   unicode     y   sticky
+
+.\g				everything 		
+\n	\r			new line
+\w			\W	all word characters	all letters all number and underscore, not considered word character
+\d 			\D	digits in phone # 	everything but digits
+\s 			\S	all white space		everything but white space
+[\s\S]				select everything				v07.16.32
+
+Anchors what starts a line? use ^ 
+^I/g 		^I/gm		starts line letter (but only shows 1 line)	flag for multiline
+d				ends a line with letter d
+d$ 				only selects d that ends a line (VERIFY THIS)
+\.				to escape special characters 		use period \.
+
+(old)		Create a capture group to extract a string from RegEx so use parenthesis ()
+(?:old) 	To select but NOT capture   
+g(?=old)	Positive Look Ahead choosing g but ony when followed by old
+g(?!old)	Negative Look Ahead 
+
+Quantifiers
+[A-Z]\w				only selects 1 letter after capital letter
+[A-Z]\w+			only selects whole word after capital letter (unless there is an apostrophe)
+[A-Z][a-z]*			* means OPTIONAL zero or more   vs 	+ means one or more
+[A-Z][a-z]*'			Beginning words that have an ' apostrophe in them
+[A-Z][a-z]*'*						zero or more ' apostrophe words
+[A-Z][a-z]*'*[a-z]					zero or more ' words including letter AFTER the '
+[A-Z][a-z]*'*[a-z]*					and then make this optional
