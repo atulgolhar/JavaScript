@@ -1,0 +1,131 @@
+if number is greater than 10 simply exit the function
+prints num
+increments num
+function call using new incremented number
+
+
+// recursive function
+
+const recurToTen = (num = 1) => {
+    if (num > 10) return;
+    console.log(num);
+    num++;
+    recurToTen(num);
+}
+
+recurToTen();
+
+
+//================================================
+// Standard Example: Fibonacci Sequence
+// 0, 1, 1, 2, 3, 5, 8, 13, 21, etc
+
+uses loop instead of recursion
+pass in a number greater than 2 (b/c we already have the the first two numbers passed in the array)
+so we slice the last two digits off the array
+we name those two numbers that were passed in as nextToLast, last
+we add those last two numbers together and push them into the array for the next number
+we push those last two numbers out of the array
+we iterate the array slice from -2 to -1 thus we iterate by -1
+
+
+const fibonacci = (num, array = [0, 1]) => {
+    while (num > 2) {
+        const [nextToLast, last] = array.slice(-2);
+        array.push(nextToLast, last);
+        num -= 1;
+    }
+    return array
+}
+
+console.log(fibonacci(7));
+
+
+// Fibonacci with Recursion
+
+const fib = (num, array = [0, 1]) => {
+    if (num <= 2) return array;
+    const [nextToLast, last] = array.slice(-2);
+    return fib(num-1, [...array, nextToLast + last]);
+}
+
+console.log(fib(7));
+
+
+
+
+// What is the nth position of the Fibonacci sequence?
+
+// Without Recursion
+
+const fibonacciPos = (pos) => {
+    if (pos <= 1) return pos;
+    const seq = [0, 1];
+    for () {
+        const [] = seq.slice(-2);
+        seq.push(nextToLast + last);	// add those numbers together as we push it to the array
+    }
+    return seq[pos];
+}
+
+console.log(fibonacciPos(8));
+
+
+must smaller function
+two recursion calls in the return statement
+
+
+// With Recursion
+const fibPos = () => {
+    if (pos < 2) return pos;
+    return fibPos(pos - 1) + fibPos(pos - 2);
+}
+
+console.log(fibPos(8));
+
+// write as 1 line of code using ternary statements
+
+const fibPos = pos => pos < 2 ? pos : fibPos(pos - 1) + fibPos(pos - 2);
+
+console.log(fibPos(8));
+
+
+
+
+// Real life examples
+
+// 1) Continuation Token from an API for AWS S3
+as long as returning data says its trucated (ie boolean) then do the following
+pass in the product ID
+connection to s3
+resultArray that we are accumulating the results in, in this its product images
+have the continuation token that I must get to continue the process as there is more
+
+
+
+const getAWSProductIdImages = async () => {
+    
+    //get the data with await fetch request
+
+    if (data.IsTruncated) {
+      //recursive
+      return await getAWSProductIdImages(
+	  productID, 
+	  s3, // connection to s3 
+	  resultArray, // accumulator
+	  data.NextContinuationToken
+     };
+}
+
+return resultArray;
+
+
+// 2) Parser:
+// Company email directory 
+// file directory
+// DOM - Web crawler in node.js
+// XML or JSON data export
+
+
+
+
