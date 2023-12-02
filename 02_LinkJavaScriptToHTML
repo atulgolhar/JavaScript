@@ -1,2 +1,51 @@
-tbd
+// index.html
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Page</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script>
+      console.log("Hello World! atul");
+    </script>
+  </head>
+  <body>
+    <main>
+      <h1>My Page</h1>
+    </main>
+  </body>
+</html>
+
+
+// main.css
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box'
+}
+
+html, body {
+    width: 100;
+    font-size: 16px;
+    background-color: #000;
+    color: #fff;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 250%;
+}
+
+// main.js
+
+// comment placeholder
