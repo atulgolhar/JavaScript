@@ -40,3 +40,125 @@ For In Loop			for (let job in band) {
 26: Promises / Fetch / Async & Await
 27: Regular Expressions
 28: Applying RegEx in JavaScript
+
+open Chrome, open url type into address bar  about:blank	// gives you blank web page screen
+
+CTRL SHIFT I 	or F12	> DevTools Elements
+CTRL SHIFT J		> DevTools Console
+
+open CTRL SHIFT I or right click		DevTools > Console > 
+click Console tab
+
+now we type directly into the console
+// comments like this
+
+Next are the 4 basic data types		string, number, boolean, undefined
+
+string data 
+can use double quotes or single quotes with string data
+"Atul"
+console will reply with the string data you typed
+> typeof keyword to see type of data used
+> typeof "Atul"	// console replies with string
+> typeof 42 	// number
+> typeof "42" 	// string		> typeof '42' 	// string
+> typeof true	// boolean		> typeof false	// boolean
+// clear console window by clicking circle with slash icon at top left
+
+
+let myVariable = 'Atul'
+
+myNumber = 42 * 2
+
+let myNumber = 42
+myNumber			
+42
+myNumber + 2			
+44
+myNumber * 2			
+84
+myNumber / 2
+21
+
+myVariable = 'Atul'
+'Atul'
+myVariable = "Atul"		// note "" vs '' dont matter
+'Atul'
+
+
+myVariable + 42
+'Atul42'
+myVariable = 42
+42
+myVariable + 10
+52
+myVariable + 10 + 'Atul'
+'52Atul'
+
+myVariable
+42
+myNumber
+42
+myVariable = 'Atul'
+'Atul'
+typeof myNumber
+'number'
+typeof myVariable
+'string'
+
+// Boolean
+
+=== strictly equal
+
+myVariable
+'Atul'
+myNumber
+42
+myVariable === myNumber
+false
+myVariable === 42
+false
+myNumber === 42
+true
+
+let myBool = myNumber
+undefined
+typeof myNumber
+'number'
+myNumber
+42
+myBool = myNumber === 42
+true
+myBool
+true
+typeof myBool
+'boolean'
+myNumber
+42
+myNumber !== 42;
+false
+myNumber
+42
+myNumber === 42
+true
+
+Review
+* how to open Chrome Dev Tool
+* how to put Chrome Dev Tools into dark mode
+* how to use the console tab in Chrome Dev Tools to enter JavaScript statements
+* 4 Data Types: 1) string 2) number 3) boolean 4) undefined
+* check data types using keyword typeof
+* how to create a variable with keyword let
+* how to name variables using camelCase
+* use basic math operators to perform math operations, concatenate string data, compare data types
+* when comparing data types, we get boolean data in return
+
+* create Hello World 
+
+alert()
+undefined
+alert("Hello World")
+undefined
+alert('Hello World')
+undefined
+
