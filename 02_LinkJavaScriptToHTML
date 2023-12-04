@@ -72,5 +72,8 @@ in index.html, create link to href css/main.css
 // Setup IDE VSCode, Terminal, DevTools
 want VSCode File Explorer on left (Cntl B), VSCode Terminal below, on right Chrome DevTools 
 in DevTools, change Dockside to show brower in top and Terminal in bottom
+AltTab to focus on Chrome window then AltTab to focus on VSCode
+CtnlB opens Terminal
 $ start index.html	// open existing index.html from VSCode Terminal 
-
+AltTab back to Chrome, CntlShiftI launches DevTools
+multi-editor windows opened using CntlShiftTab then navigate using CntlArrow
