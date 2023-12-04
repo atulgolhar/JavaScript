@@ -47,12 +47,13 @@ h1 {
 }
 
 
-// Steps for HTML and CSS 
+// Steps for HTML and CSS
 open VSCode
 open ChromeDevTools
 open VSCode folder for 02tut		// 02 Tutorial
 in terminal $ code index.html 		// opens new file called index.html
 
+// HTML
 ! 					// Emmet shortcut HTML snippet
 or type it out				// CS-50
 inside <Head> element add <title> tag with text My Page
@@ -60,6 +61,16 @@ inside <Head> element add <script> tag with console.log("Hello World")
 inside <Boby> element add <main> and <h1> tags with text My Page
 save
 
-// main.js
+// CSS
+can put <style> element inside <head> section but not good idea
+delete <style> tags	// now create css and then link to it from html link href
+$ mkdir css		// create css folder		
+$ code main.css		// create main.css file inside css folder
+in main.css, type out basic starting css boilerplate
+in index.html, create link to href css/main.css
 
-// comment placeholder
+// Setup IDE VSCode, Terminal, DevTools
+want VSCode File Explorer on left (Cntl B), VSCode Terminal below, on right Chrome DevTools 
+in DevTools, change Dockside to show brower in top and Terminal in bottom
+$ start index.html	// open existing index.html from VSCode Terminal 
+
