@@ -1,1 +1,25 @@
+note AltFileBackArrow allows additional keyboard Move access
+using keyboard navigate to VSCode 04tut folder (Cntl`), $ ls (to establish landscape)
+AltTab to VSCode
+using VSCode AltFile copy same file tree structure from 03tut to 04tut
+only file we change is main.js
+Cntl0 to navigate to file tree and then js folder and open main.js in editor
+clear contents of main.js
+keyboard navigate to Chrome, open new tab, close old tab  (Cntl 1, 2)
+launch Live Server (CntlShiftP Search Functionality, Open Live Server AltLO, Close Live Server AltLC)
+ALT Tab to browser, keep only generic original new tab, close all others
+ALT Tab to VSCode, clear VSCode terminal, $ ls
+in VSCode, $ start index.html (which launches rendered web page), CntlShiftI to lauch DevTools Console
 
+
+// Numbers
+console.log("Hello World Ch4");
+const myNumber = 42;
+const myString = "49";
+
+// Floating Point number with a decimal point is a float
+const myFloat = 42.001;
+
+console.log(myNumber);			// notice purple color for number
+console.log(myString);			// notice while color for string
+console.log(myFloat);
