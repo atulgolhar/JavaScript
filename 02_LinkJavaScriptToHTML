@@ -50,8 +50,8 @@ h1 {
 // Steps for HTML and CSS
 open VSCode
 open ChromeDevTools
-open VSCode folder for 02tut		// 02 Tutorial
-in terminal $ code index.html 		// opens new file called index.html
+$ mkdir 02tut
+$ code index.html			// creates new file at 02tut level
 
 // HTML
 ! 					// Emmet shortcut HTML snippet
@@ -64,16 +64,48 @@ save
 // CSS
 can put <style> element inside <head> section but not good idea
 delete <style> tags	// now create css and then link to it from html link href
-$ mkdir css		// create css folder		
+$ mkdir css		// create css folder at 02tut level
 $ code main.css		// create main.css file inside css folder
 in main.css, type out basic starting css boilerplate
 in index.html, create link to href css/main.css
 
 // Setup IDE VSCode, Terminal, DevTools
 want VSCode File Explorer on left (Cntl B), VSCode Terminal below, on right Chrome DevTools 
-in DevTools, change Dockside to show brower in top and Terminal in bottom
+in DevTools use CntlShiftD to switch docking position 
 AltTab to focus on Chrome window then AltTab to focus on VSCode
 CtnlB opens Terminal
 $ start index.html	// open existing index.html from VSCode Terminal 
 AltTab back to Chrome, CntlShiftI launches DevTools
 multi-editor windows opened using CntlShiftTab then navigate using CntlArrow
+
+// JavaScript		// to add JavaScript folder from Terminal
+$ mkdir js		// at 02tut level
+$ cd .. 		// to move up to file structure
+$ cd 02tut
+$ cd js			// now inside js folder
+$ code main.js 		// create new file main.js
+add comment and save to save file to file structure
+
+grab and delete script statements for now
+open Terminal, navigate to main.js file
+back in editor, cut console.log("Hello World!"); code and paste into main.js file
+back in index.html, add script scr tag
+
+<script src=""
+use VSCode to navigate and select main.js file
+now <script src tags will link to main.js
+
+add console.log("Hello World!"); 	// between <script> opening and closing tags
+
+navigate to Terminal
+$ start index.html
+
+browser renders your web page, DevTools 
+open blank Chrome webpage	about:blank
+open Chrome DevTools Console
+
+add code to main.js file	
+	console.log("Hello World!");
+	console.log(typeof "Atul");
+	console.log(typeof 42);
+	console.log(typeof true);
