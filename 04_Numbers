@@ -23,3 +23,46 @@ const myFloat = 42.001;
 console.log(myNumber);			// notice purple color for number
 console.log(myString);			// notice while color for string
 console.log(myFloat);
+
+console.log(myNumber === myString);
+console.log(typeof(myString));
+console.log(myString + 3);		// concatentates to 423
+console.log(Number(myString));		// 42
+console.log(Number(myString) + 3);	// 45
+console.log(Number(myString) === myNumber);	//  true
+console.log(Number("Dave"));		// NaN
+console.log(Number(undefined));		// NaN
+console.log(Number(true));		
+console.log(Number(false));		
+console.log(Number.isInteger(myFloat));
+console.log(Number.isInteger(myNumber));
+console.log(Number.parseFloat(myString));
+
+const myString2 = "42.123abc";
+console.log(Number.parseFloat(myString2));
+console.log(Number.parseFloat(myString2).toFixed(1));
+console.log(Number.parseFloat(myFloat).toFixed(1));
+console.log(Number.parseFloat(myFloat).toFixed(5));
+
+console.log(Number.parseInt(myFloat));
+console.log(Number.parseInt(myString));
+
+console.log(myFloat.toString());	// turns float into string
+console.log(typeof Number.parseInt(myString));
+console.log(typeof(Number.parseInt(myString)));
+console.log(typeof(Number.parseFloat(myString)));
+
+console.log(Number.parseFloat("4.237abc"));			// 4.237
+console.log(typeof Number.parseFloat("4.237abc"));		// number
+console.log(Number.parseFloat("4.237abc").toFixed(2));		// 4.24
+console.log(typeof Number.parseFloat("4.237abc").toFixed(2));	// string
+
+console.log(Number(4.237));		// 4.237
+console.log(Number("4.237"));		// 4.237
+console.log(Number("4.237abc"));	// Nan
+
+// NaN Not a Number
+
+console.log(Number("Atul"));		// NaN
+console.log(Number.isNaN("Atul"));	// false
+console.log(isNaN("Atul"));		// Global NaN  true
