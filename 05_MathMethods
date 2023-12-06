@@ -1,1 +1,101 @@
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 
+// Math Methods and Properties
+console.log(Math.PI);
+
+// Math Methods and Properties
+console.log(Math.PI);
+console.log(Math.trunc(Math.PI));
+console.log(Math.round(Math.PI));
+console.log(Math.round(3.4));
+console.log(Math.round(3.5));
+console.log(Math.ceil(Math.PI));
+console.log(Math.floor(Math.PI));
+
+console.log(Math.pow(2, 3));
+console.log(Math.pow(2, 4));
+console.log(Math.pow(2, 5));
+console.log(Math.pow(2, 10));
+console.log(Math.pow(2, 12));
+console.log(Math.pow(5, 2));
+
+console.log(Math.min(3, 4, 9, 6, 2));
+console.log(Math.min(3, 4, 9, 0.6, 2));
+
+console.log(Math.max(3, 4, 9, 0.6, 2));
+console.log(Math.max(3, 4, 9, 9.2, 2));
+
+console.log(Math.random());
+
+
+// Math Methods and Properties
+console.log(Math.random());
+
+// From 1 to 10
+
+console.log(Math.floor(Math.random() * 10));
+//                                  0.0 to 0.9999
+//                              (                  upper bound 9.9)
+//         (grabs floor 0 to 9                                                          )
+
+console.log(Math.floor(Math.random() * 10) + 1);	// multi-cursor edits
+console.log(Math.floor(Math.random() * 10) + 1);
+console.log(Math.floor(Math.random() * 10) + 1);
+console.log(Math.floor(Math.random() * 10) + 1);
+console.log(Math.floor(Math.random() * 10) + 1);
+console.log(Math.floor(Math.random() * 10) + 1);
+
+
+// Math.random() * 10
+// (Math.random() * 10)
+
+// Choose random number 1 to 10
+console.log(Math.ceil(Math.random() * 10));
+console.log(Math.ceil(Math.random() * 10));
+console.log(Math.ceil(Math.random() * 10));
+console.log(Math.ceil(Math.random() * 10));
+console.log(Math.ceil(Math.random() * 10));
+console.log(Math.ceil(Math.random() * 10));
+console.log(Math.ceil(Math.random() * 10));
+console.log(Math.ceil(Math.random() * 10));
+console.log(Math.ceil(Math.random() * 10));
+console.log(Math.ceil(Math.random() * 10));
+console.log(Math.ceil(Math.random() * 10));
+console.log(Math.ceil(Math.random() * 10));
+console.log(Math.ceil(Math.random() * 10));
+console.log(Math.ceil(Math.random() * 10));
+console.log(Math.ceil(Math.random() * 10));
+console.log(Math.ceil(Math.random() * 10));
+console.log(Math.ceil(Math.random() * 10));
+console.log(Math.ceil(Math.random() * 10));
+console.log(Math.ceil(Math.random() * 10));
+console.log(Math.ceil(Math.random() * 10));
+console.log(Math.ceil(Math.random() * 10));
+console.log(Math.ceil(Math.random() * 10));
+console.log(Math.ceil(Math.random() * 10));
+
+
+
+
+// Properties
+Math.PI
+
+// Methods
+Math.abs()
+Math.ceil()
+Math.exp()
+Math.expm1()
+Math.floor()
+Math.imul()
+Math.log()
+Math.log10()
+Math.log1p()
+Math.log2()
+Math.max()
+Math.min()
+Math.pow()
+Math.random()
+Math.round()
+Math.sign()
+Math.sqrt()
+Math.trunc()
