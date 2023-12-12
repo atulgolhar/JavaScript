@@ -1,0 +1,33 @@
+checking data types with typeof keyword
+1) return single character from a string
+typeof, string method, charAT method, pass argument to charAT method
+2) how to generate random number to pass to charAt method as an argument
+generate random # from 1-4, use Math object, Math.random, Math.floor
+Combine smaller solutions 1 & 2 to solve larger problem
+
+// const anyName = "Jonathon";
+// console.log(anyName.charAt(Math.floor(Math.random() * anyName.length)));
+
+// console.log("Dave".charAt(Math.floor(Math.random() * 4)));
+// console.log("Dave".charAt(Math.floor(Math.random() * 4)));
+// console.log("Dave".charAt(Math.floor(Math.random() * 4)));
+// console.log("Dave".charAt(Math.floor(Math.random() * 4)));
+// console.log("Dave".charAt(Math.floor(Math.random() * 4)));
+// console.log("Dave".charAt(Math.floor(Math.random() * 4)));
+// console.log("Dave".charAt(Math.floor(Math.random() * 4)));
+// console.log("Dave".charAt(Math.floor(Math.random() * 4)));
+
+// Step Wise Solution
+// console.log("Dave".charAt(1))
+const anyName = "Jonathon";
+
+// Test 
+console.log(anyName.charAt(Math.floor(Math.random() * anyName.length)));
+console.log(anyName.charAt(Math.floor(Math.random() * anyName.length)));
+console.log(anyName.charAt(Math.floor(Math.random() * anyName.length)));
+console.log(anyName.charAt(Math.floor(Math.random() * anyName.length)));
+console.log(anyName.charAt(Math.floor(Math.random() * anyName.length)));
+console.log(anyName.charAt(Math.floor(Math.random() * anyName.length)));
+console.log(anyName.charAt(Math.floor(Math.random() * anyName.length)));
+console.log(anyName.charAt(Math.floor(Math.random() * anyName.length)));
+console.log(anyName.charAt(Math.floor(Math.random() * anyName.length)));
