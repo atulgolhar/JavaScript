@@ -1,2 +1,143 @@
-// Choose random # from 1 to 10
+// Math Methods and Properties
+console.log(Math.PI);
+console.log(Math.trunc(Math.PI));
+console.log(Math.round(Math.PI))
+
+
+// Math Methods and Properties
+console.log(Math.PI);
+console.log(Math.trunc(Math.PI));
+console.log(Math.round(Math.PI));
+console.log(Math.round(3.4));
+console.log(Math.round(3.5));
+console.log(Math.ceil(Math.PI));
+console.log(Math.floor(Math.PI));
+
+console.log(Math.pow(2, 3));
+console.log(Math.pow(2, 4));
+console.log(Math.pow(2, 5));
+console.log(Math.pow(2, 10));
+console.log(Math.pow(2, 12));
+console.log(Math.pow(5, 2));
+
+console.log(Math.min(3, 4, 9, 6, 2));
+console.log(Math.min(3, 4, 9, 0.6, 2));
+
+console.log(Math.max(3, 4, 9, 0.6, 2));
+console.log(Math.max(3, 4, 9, 9.2, 2));
+
+console.log(Math.random());
+
+
+// Math Methods and Properties
+console.log(Math.random());
+
+// From 1 to 10
+
+console.log(Math.floor(Math.random() * 10));
+//                                  0.0 to 0.9999
+//                              (                  upper bound 9.9)
+//         (grabs floor 0 to 9                                                          )
+
+console.log(Math.floor(Math.random() * 10) + 1);	// multi-cursor edits
+console.log(Math.floor(Math.random() * 10) + 1);
+console.log(Math.floor(Math.random() * 10) + 1);
+console.log(Math.floor(Math.random() * 10) + 1);
+console.log(Math.floor(Math.random() * 10) + 1);
+console.log(Math.floor(Math.random() * 10) + 1);
+
+
+// Math.random() * 10
+// (Math.random() * 10)
+
+// Choose random number 1 to 10
 console.log(Math.ceil(Math.random() * 10));
+console.log(Math.ceil(Math.random() * 10));
+console.log(Math.ceil(Math.random() * 10));
+console.log(Math.ceil(Math.random() * 10));
+
+
+// Math Methods and Properties
+console.log(Math.random() * 4);
+
+// JS expression generate random # from 1-10
+console.log(Math.floor(Math.random() * 10) + 1);
+console.log(Math.floor(Math.random() * 10) + 1);
+console.log(Math.floor(Math.random() * 10) + 1);
+console.log(Math.floor(Math.random() * 10) + 1);
+console.log(Math.floor(Math.random() * 10) + 1);
+console.log(Math.floor(Math.random() * 10) + 1);
+console.log(Math.floor(Math.random() * 10) + 1);
+console.log(Math.floor(Math.random() * 10) + 1);
+console.log(Math.floor(Math.random() * 10) + 1);
+console.log(Math.floor(Math.random() * 10) + 1);
+
+console.log(Math.random());
+console.log(Math.random() * 10);
+
+console.log(Math.floor(Math.random() * 10));
+console.log(Math.floor(Math.random() * 10));
+console.log(Math.floor(Math.random() * 10));
+console.log(Math.floor(Math.random() * 10));
+console.log(Math.floor(Math.random() * 10));
+console.log(Math.floor(Math.random() * 10));
+console.log(Math.floor(Math.random() * 10));
+
+// Multicursor edits (Ctrl Alt DownArrow)
+console.log(Math.floor(Math.random() * 10) + 1);
+console.log(Math.floor(Math.random() * 10) + 1);
+console.log(Math.floor(Math.random() * 10) + 1);
+console.log(Math.floor(Math.random() * 10) + 1);
+console.log(Math.floor(Math.random() * 10) + 1);
+console.log(Math.floor(Math.random() * 10) + 1);
+
+
+// note Math.ceil() has zero chance of yielding 0
+// thus choose Math.floor() + 1)
+
+
+// Coding Challenge: return random letter from a name
+
+console.log(typeof ("Dave"));		// string
+console.log("Dave".charAt(2));		// returns v 
+console.log("Dave".charAt(0));		/ returns D
+
+
+const randomIndex1 = Math.floor(Math.random() * 4) + 1;
+console.log("Dave".charAt(randomIndex1));
+
+const randomIndex2 = Math.floor(Math.random() * 4) + 1;
+console.log("Dave".charAt(randomIndex2));
+
+const randomIndex3 = Math.floor(Math.random() * 4) + 1;
+console.log("Dave".charAt(randomIndex3));
+
+console.log("Name".charAt(0));
+console.log("Name".charAt(1));
+console.log("Name".charAt(2));
+console.log("Name".charAt(3));
+
+console.log("Atul".charAt(Math.floor(Math.random() * 4)));
+console.log("Atul".charAt(Math.floor(Math.random() * 4)));
+console.log("Atul".charAt(Math.floor(Math.random() * 4)));
+console.log("Atul".charAt(Math.floor(Math.random() * 4)));
+console.log("Atul".charAt(Math.floor(Math.random() * 4)));
+console.log("Atul".charAt(Math.floor(Math.random() * 4)));
+console.log("Atul".charAt(Math.floor(Math.random() * 4)));
+console.log("Atul".charAt(Math.floor(Math.random() * 4)));
+
+// Let's make this work for all names
+const anyName = "Jonathon";
+console.log(anyName.charAt(Math.floor(Math.random() * anyName.length)));
+console.log(anyName.charAt(Math.floor(Math.random() * anyName.length)));
+console.log(anyName.charAt(Math.floor(Math.random() * anyName.length)));
+console.log(anyName.charAt(Math.floor(Math.random() * anyName.length)));
+console.log(anyName.charAt(Math.floor(Math.random() * anyName.length)));
+console.log(anyName.charAt(Math.floor(Math.random() * anyName.length)));
+console.log(anyName.charAt(Math.floor(Math.random() * anyName.length)));
+console.log(anyName.charAt(Math.floor(Math.random() * anyName.length)));
+console.log(anyName.charAt(Math.floor(Math.random() * anyName.length)));
+console.log(anyName.charAt(Math.floor(Math.random() * anyName.length)));
+console.log(anyName.charAt(Math.floor(Math.random() * anyName.length)));
+console.log(anyName.charAt(Math.floor(Math.random() * anyName.length)));
+console.log(anyName.charAt(Math.floor(Math.random() * anyName.length)));
