@@ -17,7 +17,7 @@ if (condition) {
 let soup = "chicken noodle soup";
 let reply;
 if (soup) {
-    reply = "Here is your order or ${soup}";
+    reply = `Here is your order or ${soup}`;
 } else {
     reply = "Sorry, we are out of soup";
 }
@@ -44,7 +44,7 @@ if (customerIsBanned) {
 
 
 if (soup) {
-    reply = "Here is your order or ${soup}";
+    reply = `Here is your order or ${soup}`;
 } else {
     reply = "Sorry, we are out of soup";
 }
