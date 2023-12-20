@@ -53,6 +53,7 @@ console.log(reply);
 
 
 // Conditionals: If statements + boolean flag
+// now lets add crackers as boolean datas
 
 let customerIsBanned = false;
 let soup = "chicken noodle soup";
@@ -71,4 +72,6 @@ if (customerIsBanned) {
 
 console.log(reply);
 
-
+Yes soup		let
+Customer banned? yes 	Soup? 	`${soup}'
+Customer banned? no	Soup? 	`${soup}`
