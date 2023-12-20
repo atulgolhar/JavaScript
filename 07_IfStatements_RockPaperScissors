@@ -1,1 +1,25 @@
-tbd
+// Conditionals: If Statements
+
+// Decision Tree - Rock, Paper, Scissors
+if (playerOne === computer) {
+    // tie game
+} else if (playerOne === "rock") {                  // 1st else if
+    if (computer === "paper") {                     // nested if, explicit logic 
+        // computer wins b/c rock < paper
+    } else {
+        // playerOne wins rock > scissors           // implicit logic
+    }
+} else if (playerOne === "paper") {                 // 2nd else if
+    if (computer === "scissors") {
+        // computer wins b/c paper < scissors       // nested if, explicit logic
+    } else {
+        // playerOne wins b/c paper < rock          // implicit logic
+    }
+} else (playerOne === "scissors") {                 // (comparison), redundant 
+    if (computer === "rock") {
+        // computer wins b/c scissors < rock        // nest if, explicit logic
+    } else 
+        // playerOne wins b/c scissors > paper      // implicit logic
+}
+
+console.log();
