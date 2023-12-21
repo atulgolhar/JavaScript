@@ -1,0 +1,31 @@
+// Conditionals Switch Statements Rock Paper Scissors
+
+let playerOne = "s";
+let computer = "paper";
+
+switch (playerOne) {
+    case computer:
+        console.log("Tie game");
+        break;
+    case "rock":
+        if (computer === "paper") {
+            console.log("rock loses to paper, so computer wins");
+        } else {
+            console.log("rock beats scissors, so playerOne wins");
+        }
+        break;
+    case "paper":
+        if (computer === "scissors") {
+            console.log("paper loses to scissors, so computer wins");
+        } else {
+            console.log("paper beats rock, so playerOne wins");
+        }
+        break;
+    case "scissors":
+        if (computer === "rock") {
+            console.log("scissors loses to rock, so computer wins");
+        } else {
+            console.log("scissors beats paper, so playerOne wins");
+        }
+        break;
+}
