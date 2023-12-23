@@ -1,0 +1,29 @@
+08_SwitchStatements_RockPaperScissors
+
+// Conditionals Switch Statements Rock Paper Scissors
+
+let playerOne = "rock";
+let computer = "rock";
+
+// pass value of playerOne to our switch statement
+// 1st case we compare playerOne to see if its identical to computer, yes it is, tie
+switch (playerOne) {
+    case computer:
+        console.log("playerOne rock, computer rock, thus tie");
+        break;
+    case "rock":
+        // DRY console.log("playerOne rock, computer rock, playerOne wins");
+        console.log("playerOne rock, computer paper, playerOne wins");
+        console.log("playerOne rock, computer scissors, playerOne wins");
+        break;
+    case "paper":
+        // DRY console.log("playerOne rock, computer rock, playerOne wins");
+        console.log("playerOne rock, computer scissors, playerOne wins");
+        console.log("playerOne rock, computer paper, playerOne wins");
+        break;
+    case "scissors":
+        //DRY console.log("playerOne rock, computer rock, playerOne wins");
+        console.log("playerOne rock, computer paper, playerOne wins");
+        console.log("playerOne rock, computer scissors, playerOne wins");
+        break;
+}
