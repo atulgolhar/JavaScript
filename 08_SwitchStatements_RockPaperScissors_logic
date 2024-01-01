@@ -12,17 +12,17 @@ switch (playerOne) {
         console.log("playerOne rock, computer rock, thus tie");
         break;
     case "rock":
-        // DRY console.log("playerOne rock, computer rock, playerOne wins");
+        // DRY console.log("playerOne rock");
         console.log("playerOne rock, computer paper, playerOne wins");
         console.log("playerOne rock, computer scissors, playerOne wins");
         break;
     case "paper":
-        // DRY console.log("playerOne rock, computer rock, playerOne wins");
+        // DRY console.log("playerOne paper");
         console.log("playerOne rock, computer scissors, playerOne wins");
         console.log("playerOne rock, computer paper, playerOne wins");
         break;
     case "scissors":
-        //DRY console.log("playerOne rock, computer rock, playerOne wins");
+        // DRY console.log("playerOne scissors");
         console.log("playerOne rock, computer paper, playerOne wins");
         console.log("playerOne rock, computer scissors, playerOne wins");
         break;
