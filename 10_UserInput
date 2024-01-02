@@ -1,1 +1,27 @@
+// User Input - simple alert box
+alert("Click ok");
 
+
+// User Input - simple text inside alert box but nothing to capture input event
+confirm("Ok === True\nCancel === False");
+
+
+// User Input - button choice input event shows up in console
+let myBoolean = confirm("Ok === True\nCancel === False"); // click button
+console.log(myBoolean); // console shows value (lowercase string)
+
+
+// User Input - note no way to see console value as we are not capturing that button text input
+let name = prompt("Please enter your name.");		
+
+
+// User Input - note no way to see console value as we are not capturing that button text input
+let name = prompt("Please enter your name.");		
+console.log(name);
+
+// when user enters input, that input is seen in console
+// but when user clicks Cancel, we then get a null value with string data in the console
+
+
+// Nullish coalescing operator (??)
+...
