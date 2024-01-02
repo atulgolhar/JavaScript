@@ -21,3 +21,19 @@ let response = soup
     : "Sorry, no soup on menu";
 
 console.log(response);				// "Yes, we have soup on the menu."
+
+
+
+// Conditionals: Chained Ternary Operator
+
+// condition ? ifTrue : ifFalse;
+
+let soup = "Chicken Noodle Soup";
+let isCustomerBanned = true;
+let soupAccess = isCustomerBanned
+    ? "Sorry, no soup for you b/c your banned!"
+    : soup
+    ? `Yes, we have ${soup} on the menu today.`
+    : "No soup on the menu today.";
+
+console.log(soupAccess);
