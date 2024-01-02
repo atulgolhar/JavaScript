@@ -1,0 +1,69 @@
+// Conditionals: Chained Ternary Operator
+// chaining ternary operators is waterfall like behavior
+
+// condition ? ifTrue : ifFalse;
+
+let playerOne = "paper"; // change inputs to test
+let computer = "scissors"; // change inputs to test
+let result =
+    playerOne === computer
+        ? "tie game"
+        : playerOne === "rock" && computer === "paper"
+        ? "computer wins" // computer wins
+        : playerOne === "paper" && computer === "scissors"
+        ? "computer wins" // computer wins
+        : playerOne === "scissors" && computer === "rock"
+        ? "computer wins" // computer wins options exhausted
+        : "playerOne wins"; // playerOne wins by default
+
+console.log(result);
+
+
+
+// HTML
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="" UTF-8 />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Page</title>
+        <link rel="stylesheet" href="./css/main.css" />
+        <script src="./js/main.js">
+            Coolness
+        </script>
+    </head>
+    <body>
+        <main>
+            <h1>Broccoli Ice Cream v2</h1>
+            <h4>Tues daytime</h4>
+        </main>
+    </body>
+</html>
+
+
+// CSS
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    font-size: 16px;
+    background-color: #1bd121;
+    color: #ddee20;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 150%;
+}
