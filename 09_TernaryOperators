@@ -37,3 +37,18 @@ let soupAccess = isCustomerBanned
     : "No soup on the menu today.";
 
 console.log(soupAccess);
+
+
+// Variations Here
+
+let soup = "Chicken Noodle Soup";
+let isCustomerBanned = true;			
+console.log(soupAccess);			// "Sorry, no soup for you b/c your banned!"
+
+let soup = "Chicken Noodle Soup";
+let isCustomerBanned = false;		// `Yes, we have ${soup} on the menu today.`
+console.log(soupAccess);			// `Yes, we have Chicken Noodle Soup on the menu today.`
+ 
+let soup;
+let isCustomerBanned = false;			
+console.log(soupAccess);			// "No soup on the menu today."
