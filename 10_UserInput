@@ -1,7 +1,9 @@
+// TYPE 1
 // User Input - simple alert box
-alert("Click ok");
+alert("Click ok");			// console shows No issues
+					// thus need to capture input event
 
-
+// TYPE 2
 // User Input - simple text inside alert box but nothing to capture input event
 confirm("Ok === True\nCancel === False");
 
@@ -10,7 +12,7 @@ confirm("Ok === True\nCancel === False");
 let myBoolean = confirm("Ok === True\nCancel === False"); // click button
 console.log(myBoolean); // console shows value (lowercase string)
 
-
+// TYPE 3
 // User Input - note no way to see console value as we are not capturing that button text input
 let name = prompt("Please enter your name.");		
 
@@ -19,9 +21,26 @@ let name = prompt("Please enter your name.");
 let name = prompt("Please enter your name.");		
 console.log(name);
 
-// when user enters input, that input is seen in console
+// when user enters input, clicks ok, then that input is seen in console
 // but when user clicks Cancel, we then get a null value with string data in the console
+// we need to plan for the null value (ie check for it).
+// null translates as false
+// way 1 to check is Nullish Coalescing Operator
 
+// Nullish coalescing operator (??) 	
+// if name has a value log name to the console
+// if enter nothing and click cancel then "" text is displayed
 
-// Nullish coalescing operator (??)
-...
+let name = prompt("Please enter your name.");
+console.log(name ?? "You didnt enter your name."); //sends text entered or default text to console
+
+// enter name, click ok, console shows your name
+// enter name, click cancel, console shows default text
+// enter nothing, click cancel, console shows default text
+// enter nothing, click ok, console yields blank screen, ISSUE HERE
+
+// User Input
+let name = prompt("Please enter your name.");
+console.log(typeof name);		console.log(name ?? "You didnt enter your name.");
+// click OK yields string data with blank line or your inputted text
+// click Cancel yields object data with default text
