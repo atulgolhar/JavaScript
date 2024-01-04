@@ -1,0 +1,18 @@
+// User Input - Nullish Coalescing Operator
+
+// let dhac = prompt("Quinn to swim tonight");
+// console.log(dhac);
+
+// type Yes, click OK, console shows Yes
+// type No, click OK, console No
+// type Yes, click Cancel, console shows null
+// type Nothing, click OK, console shows blank line
+
+// Nullish Coalescing Operator
+let dhacSwimClub = prompt("Quinn to swim tonight?");
+console.log(dhacSwimClub ?? "You didnt answer the question.");
+
+// note User enters Yes, click Cancel, console shows default answer. ERROR
+// note User enters nothing, click OK, console shows blank line. ERROR
+
+// tbd
