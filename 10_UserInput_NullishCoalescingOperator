@@ -15,4 +15,8 @@ console.log(dhacSwimClub ?? "You didnt answer the question.");
 // note User enters Yes, click Cancel, console shows default answer. ERROR
 // note User enters nothing, click OK, console shows blank line. ERROR
 
-// tbd
+// TODO
+console.log(typeof dhacSwimClub);
+
+// Enter Yes, click OK, string
+// leave blank, click OK, string ERROR need to account for this
