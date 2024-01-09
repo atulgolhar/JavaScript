@@ -1,0 +1,13 @@
+// You and a friend are debating which is better to watch the football or baseball. Challenge is to choose 1 letter from the NFL&MLB. Using only 1 line of code.
+
+console.log("NFL&MBA".charAt(Math.floor(Math.random() * 3)));
+
+
+// build it from the ground up
+
+Math.random()
+Math.random() * 7
+Math.floor(Math.random() * 7)
+charAt(Math.floor(Math.random() * 7))
+"NFL&MBA".charAt(Math.floor(Math.random() * 7))
+console.log("NFL&MBA".charAt(Math.floor(Math.random() * 7)));
