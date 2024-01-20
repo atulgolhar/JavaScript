@@ -3,14 +3,14 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction
 // Conditionals: If statements
 
 // Syntax
-if (condition) {
-    // run some code
+
+if (condition) { 
+    // run 1st block of code
+} else if {
+    // run different 2nd block of code 
 } else {
-    // run different code
+    // run 3rd block of code
 }
- 
-
-
 
 // Conditionals: If statements
 
