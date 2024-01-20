@@ -63,12 +63,18 @@ console.log(reply);
 // Conditionals: If statements + boolean flag
 // now lets add crackers as boolean datas
 
+// logic order
+// check if banned
+// check if soup & crackers
+// check if soup
+// sorry but out of soup
+
 let customerIsBanned = false;
 let soup = "chicken noodle soup";
 let crackers = true;
 let reply;
 
-if (customerIsBanned) {
+if (customerIsBanned) {	
     reply = "No soup for you b/c your banned!";
 } else if (soup && crackers) {
     reply = `Here is your order of ${soup} with crackers`;
