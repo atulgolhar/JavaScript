@@ -43,10 +43,18 @@ if (customerIsBanned) {
 }
 
 
-if (soup) {
-    reply = `Here is your order or ${soup}`;
-} else {
-    reply = "Sorry, we are out of soup";
+// Conditionals: If statements + boolean flag
+
+let customerIsBanned = false;
+let soup = "chicken noodle soup";
+let reply;
+
+if (customerIsBanned) {
+    reply = "No soup for you b/c your banned!";		// check for banned before check for soup
+} else if (soup) {					// check for soup
+    reply = `Here is your order of ${soup}`;
+} else {						// not banned, no soup
+    reply = `Sorry, we are out of ${soup}, for real!`;
 }
 
 console.log(reply);
