@@ -98,10 +98,14 @@ console.log(Math.floor(Math.random() * 10) + 1);
 
 // Coding Challenge: return random letter from a name
 
+console.log("Dave".charAt(0));      // D
+console.log("Dave".charAt(1));      // a
+console.log("Dave".charAt(2));      // v
+console.log("Dave".charAt(3));      // e 
+
 console.log(typeof ("Dave"));		// string
 console.log("Dave".charAt(2));		// returns v 
 console.log("Dave".charAt(0));		/ returns D
-
 
 const randomIndex1 = Math.floor(Math.random() * 4) + 1;
 console.log("Dave".charAt(randomIndex1));
