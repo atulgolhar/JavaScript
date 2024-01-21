@@ -101,3 +101,29 @@ console.log(reply);
 Yes soup		let
 Customer banned? yes 	Soup? 	`${soup}'
 Customer banned? no	Soup? 	`${soup}`
+
+
+// Test Score example
+
+let testScore = 83;
+let grade;
+let collegeStudent;
+
+if (testScore >= 90) {
+    grade = "A";
+} else if (testScore >= 80) {
+    grade = "B";
+} else if (testScore >= 70) {
+    grade = "C";
+} else if (testScore >= 65) {
+    grade = "D";
+} else {
+    if (collegeStudent) {
+        grade = "U";
+    } else {
+        grade = "F";
+    }
+}
+
+console.log(testScore);
+console.log(grade)
