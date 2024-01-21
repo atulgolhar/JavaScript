@@ -43,6 +43,7 @@ console.log(reply);
 // logical order of if statement drives this
 
 // now add boolean to see if Customer is banned
+// note check for customer banned before checking soup status
 
 
 let customerIsBanned = true;
