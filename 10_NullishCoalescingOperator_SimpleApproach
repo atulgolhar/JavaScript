@@ -1,0 +1,8 @@
+let name = prompt("Enter your name");
+if (name) {
+    console.log(name.length);
+    console.log(name.trim().length);
+    console.log(name.trim());
+} else {
+    console.log("You didnt enter your name");
+}
