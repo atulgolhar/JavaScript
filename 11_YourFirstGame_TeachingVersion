@@ -1,0 +1,55 @@
+// Teaching Instructions    // ask user, confirm popup
+// verify response in console
+// add playGame variable
+// if not wanting to play, add next time statement using alert popup
+// code up play
+// evaluate playerChoice incoming data, check for bogus entry
+// trim whitespace, lowercase
+// use if to evaluate player input || ||
+// develop computer choice Math.random using ternary
+// console log each choice, template literal
+
+
+
+// so complete code so far
+
+let playGame = confirm("Shall we play rock, paper, scissors?");
+if (playGame) {
+    // play
+    let playerChoice = prompt("Please enter rock, paper, or scissors");
+    if (playerChoice) {
+        let playerOne = playerChoice.trim().toLowerCase();
+        if (
+            playerOne === "rock" ||
+            playerOne === "paper" ||
+            playerOne === "scissors"
+        ) {
+            let computerChoice = Math.floor(Math.random() * 3 + 1);
+            let computer =
+                computerChoice === 1
+                    ? "rock"
+                    : computerChoice === 2
+                    ? "paper"
+                    : "scissors";
+            let result =
+                playerOne === computer
+                    ? "Tie game"
+                    : playerOne === "rock" && computer === "paper"
+                    ? `playerOne: ${playerOne}\nComputer: ${computer}\nComputer wins`
+                    : playerOne === "paper" && computer === "scissors"
+                    ? `playerOne: ${playerOne}\nComputer: ${computer}\nComputer wins`
+                    : playerOne === "scissors" && computer === "rock"
+                    ? `playerOne: ${playerOne}\nComputer: ${computer}\nComputer wins`
+                    : `playerOne: ${playerOne}\nComputer: ${computer}\nplayerOne wins`;
+            alert(result);
+            let playAgain = confirm("Play Again?");
+            playAgain ? location.reload() : alert("Ok, thanks for playing");
+        } else {
+            alert("You didnt enter rock, paper, or scissors");
+        }
+    } else {
+        alert("You said no, ok, maybe next time");
+    }
+} else {
+    alert("You said no, ok, maybe next time");
+}
