@@ -1,1 +1,75 @@
 
+// Loops
+
+// While Loop				// condition at beginning
+
+while (condition true) {
+    // do this
+}
+
+let myNumber = 0;
+while (myNumber < 20) {			// condition at beginning
+    console.log(myNumber);		// while condition true, do this		thus can skip over if condition is never met
+    myNumber = myNumber + 1;
+}
+
+    myNumber = myNumber + 1;
+    myNumber++				// Post increment, right after the number it gets incremented
+    myNumber += 5;			// 5, 10, 15, 20
+
+let myNumber = 0;
+while (myNumber < 20) {			// range is 0 to 19
+
+let myNumber = 1;
+while (myNumber <= 20) {		// range is 1 to 20
+
+let myNumber = 0;
+while (myNumber < 20) {
+    console.log(myNumber);
+    myNumber++;				// range is 0 to 19
+}
+
+let myNumber = 0;
+while (myNumber < 20) {
+    myNumber += 5;			// 5, 10, 15, 20
+    console.log(myNumber);
+}
+
+
+// Do While Loop			// check condition at end
+
+do { this } 
+   while (condition true)
+
+let myNumber = 0;
+do {					// do this at least once
+    myNumber += 2;
+    console.log(myNumber);
+} while (myNumber < 20);		// check condition at end
+
+
+// For Loop
+
+    (3 parts)
+
+for (let i = 0; i <= 10; i++) {		// 3 parts or components 	counter; condition; increment
+    console.log(i);
+}
+
+for (let i = 0; i <= 10; ) {		// here increment is at bottom
+    console.log(i);
+    i += 2;
+}
+
+
+let j = 0;				// here counter variable is at top
+for (; j <= 10; ) {
+    console.log(j);
+    j += 2;
+}
+
+
+let name = "GreenBayPackers"		// iterate over characters in string
+for (i = 0; i <= name.length; i++) {	// name.length method
+    console.log(name.charAt(i));	// name.charAt() method to grab character
+}
