@@ -1,0 +1,39 @@
+let playGame = confirm("Shall we play a game RPS?");
+console.log(playGame);
+
+if (playGame) {
+    let playerChoice = prompt("Please choose: rock, paper, or scissors");
+    console.log("playerChoice = ", playerChoice);
+    if (playerChoice) {
+        let playerOne = playerChoice.trim().toLowerCase();
+        if (
+            playerOne === "rock" ||
+            playerOne === "paper" ||
+            playerOne === "scissors"
+        ) {
+            let computerChoice = Math.floor(Math.random() * 3 + 1);
+            let computer =
+                computerChoice === 1
+                    ? "rock"
+                    : computerChoice === 2
+                    ? "paper"
+                    : "scissors";
+            console.log("computer = ", computer);
+            let result =
+                playerOne === computer
+                    ? "Tie Game"
+                    : playerOne === "rock" && computer === "paper"
+                    ? "computer wins"
+                    : playerOne === "paper" && computer === "scissors"
+                    ? "computer wins"
+                    : playerOne === "scissors" && computer === "rock"
+                    ? "computer wins"
+                    : "player wins";
+            console.log(result);
+        }
+    } else {
+        alert("You didnt enter rock, paper or scissors");
+    }
+} else {
+    alert("No? Ok, maybe next time");
+}
