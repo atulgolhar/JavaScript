@@ -1,1 +1,31 @@
+// Anonymous Functions
 
+function getUserNameFromEmail(email) {					// start here with original function
+    return email.slice(0, email.indexOf("@"));
+}
+
+console.log(getUserNameFromEmail("userIceCream@GitHub.com"));
+
+
+// Regular function turned into Anonymous function = 
+
+      function getUserNameFromEmail(email) {
+      function                     (email) {	
+const function                     (email) {	
+const getUserNameFromEmail = function (email) {
+
+
+
+// remove specific name and assign it as a const to generic function
+
+function getUserNameFromEmail(email) {					const getUserNameFromEmail = function (email) {
+    return email.slice(0, email.indexOf("@"));
+}
+
+console.log(getUserNameFromEmail("userIceCream@GitHub.com"));		// userIceCream
+console.log(typeof (getUserNameFromEmail));				// function
+
+
+// Difference
+function getUserNameFromEmail(email) {				
+const getUserNameFromEmail = function (email) {				
