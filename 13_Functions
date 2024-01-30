@@ -29,3 +29,228 @@ console.log(typeof (getUserNameFromEmail));				// function
 // Difference
 function getUserNameFromEmail(email) {				
 const getUserNameFromEmail = function (email) {				
+
+// Methods = Built-in functions
+// Functions = we write our own functions
+// Modules = introduced ES6 in 2015, used to export code Functions or classes from 1 file to another.
+
+
+----example0 
+// note calling a function requires using "()"
+function sum() {
+    return 2 + 3;
+}
+console.log(sum); 	// note sum vs sum()		using sum without () results in console log printing 
+
+											f sum() {
+											    return 2 + 3;
+											}
+----example1
+function sum() {
+    return 2 + 3;
+}
+console.log(sum());			// returns 5 as 2 and 3 are hardcoded
+
+
+----example2
+function sum() {
+    return 2 + 3;
+}
+console.log(sum(2, 6));			// pass in parameters 2, 6 but function does not ingest them so ignores
+					// returns 5 as 2 and 3 are hardcoded
+
+----example3				
+function sum(num1, num2) {		// function ingests parameters 2 and 9 but does not use them, instead uses hardcoded 2, 3
+    return 2 + 3;
+}
+console.log(sum(2, 9));			// pass in parameters 2, 9
+					// returns 5 as 2 and 3 are hardcoded
+
+
+----example4 bofore hardcode		// pass in parameters 2,9 function ingests but hardcoded 2, 3 returns 2 9 then 5 \n
+function sum(num1, num2) {
+    console.log(num1, num2);		// returns 2 9 then 5 \n					2 9 
+    return 2 + 3;											5
+}
+console.log(sum(2, 9))
+
+
+----example5 after hardcode		// pass in parameters 2,9 function ingests but hardcoded 2,3 returns 5 does not even print 2,9
+function sum(num1, num2) {		
+    return 2 + 3;
+    console.log(num1, num2);		// this only prints 5 as return keyword exists function 
+}
+console.log(sum(2, 9))
+
+
+----example6
+function sum(num1, num2) {		// pass in parameter 2 only, function expects two parameters
+    console.log("log1", num1, num2);	// 								log1 2 undefined
+    console.log(typeof num2);		//								undefined
+    return 2 + 3;			//								returns hardcoded 5
+    console.log("log2", num1, num2);
+}
+console.log(sum(2));			//								5
+
+
+----example7 num1 num2, pass in num1 only, returns 5
+function sum(num1, num2) {
+    console.log("log1", num1, num2);	//								log1 2 undefined
+    console.log(typeof num2);		//								undefined
+    return num1 + 3;			// only difference from example6 is include num1 here		5 returnded hardcoded 5
+    console.log("log2", num1, num2);
+}
+console.log(sum(2));			//								5
+
+
+----example7 updated 
+function sum(num1, num2) {
+    console.log("log1", num1, num2);	//								log1 2 undefined
+    console.log("num2 typeof =", typeof num2);		//						num2 typeof = undefined
+    return num1 + num2;
+    console.log("log2", num1, num2);
+}
+console.log(sum(2));			//								NaN
+
+
+
+----example8 num1 num2, pass in num1 only, returns NaN 
+function sum(num1, num2) {
+    console.log("log1", num1, num2);	//								log1 2 undefined
+    console.log(typeof num2);		//								undefined
+    return num1 + num2;			// now add num2 here (example 7 vs example 8)			now calcuation occurs resulting in NaN
+    console.log("log2", num1, num2);
+}
+console.log(sum(2));			// 								NaN
+
+----example8 updated
+function sum(num1, num2) {
+    console.log("log1", num1, num2);	//								log1 2 9
+    console.log("num2 typeof =", typeof num2);		//						num2 typeof = number
+    return num1 + num2;
+    console.log("log2", num1, num2);
+}
+console.log(sum(2, 9));			//								11
+
+
+----example9 debug
+function sum(num1, num2) {
+    console.log("debug1", num1, num2);						//			debug1 2 undefined
+    console.log("bebug2 num2 typeof =", typeof num2);				//			debug2 num2 typeof = undefined
+    if (num2 === undefined) {
+        console.log("debug3");							//			debug3
+        return num1 + num1;							// since num2 is undefined, if block returns num1 + num1 (ie 2+2)
+    }
+    console.log("debug4");
+    return num1 + num2;
+    console.log("debug5", num1, num2);
+}
+console.log(sum(2));								//			4
+
+
+----example9 simplified
+function sum(num1, num2) {
+    if (num2 === undefined) {
+        return num1 + num1;
+    }
+    return num1 + num2;
+}
+console.log(sum(2));								// 			4
+
+console.log(sum(5));								//			10			ie 5+5
+console.log(sum(5, 10));							//			15			ie 5+10
+
+
+----example10
+function getUserNameEmail(email) {
+    return email.slice()			// calling a slice method inside our function
+}
+
+// note can name this anything
+
+function getUserNameEmail(iceCream) {		// name = iceCream instead of email
+    return iceCream.slice()			// calling a slice method inside our function
+}
+
+
+function getUserNameEmail(email) {
+    let fullName = email.slice(0, email.indexOf("@"));
+    return email.slice(0, email.indexOf("M"));
+}
+console.log(getUserNameEmail("NFLMLBNBA@wholefoods.com"));
+
+
+----example11
+// pass in user email, capture only name stopping at @ symbol
+
+function getUserNameEmail(email) {		
+    return email.slice(0, email.indexOf("@"));
+}
+console.log(getUserNameEmail("NFLMLBNBA@github.com"));				// NFLMLBNBA			
+
+
+----example12
+
+    return email.slice(0, email.indexOf("@"));
+
+console.log(getUserNameEmail("NFLMLBNBA@github.com"));				// NFL
+
+
+
+function getUserNameEmail(email) {
+    return email.slice(0, email.indexOf("M"));
+}
+console.log(getUserNameEmail("NFLMLBNBA@github.com"));
+
+
+function getUserNameEmail(iceCream) {
+    return iceCream.slice(0, iceCream.indexOf("@"));
+}
+console.log(getUserNameEmail("NFLMLBNBA@github.com"));
+
+v01.43.36
+
+
+// Anonymous Functions
+
+
+function getUserNameFromEmail(email) {					// start here with original function
+    return email.slice(0, email.indexOf("@"));
+}
+
+console.log(getUserNameFromEmail("userIceCream@GitHub.com"));
+
+
+// Regular function turned into Anonymous function = 
+
+      function getUserNameFromEmail(email) {
+      function                     (email) {	
+const function                     (email) {	
+const getUserNameFromEmail = function (email) {
+
+
+
+// remove specific name and assign it as a const to generic function
+
+function getUserNameFromEmail(email) {					const getUserNameFromEmail = function (email) {
+    return email.slice(0, email.indexOf("@"));
+}
+
+console.log(getUserNameFromEmail("userIceCream@GitHub.com"));		// userIceCream
+console.log(typeof (getUserNameFromEmail));				// function
+
+
+// Differences
+function getUserNameFromEmail(email) {				
+const getUserNameFromEmail = function (email) {
+const getUserNameFromEmail = (email) => {				// Arrow Function, remove function keyword and add =>
+
+
+// Reusable (Useful Custom) Functions
+
+const toProperCase = (name) => {
+    return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+};
+
+console.log(toProperCase("january"));					// January
+
