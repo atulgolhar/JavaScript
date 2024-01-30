@@ -1,1 +1,439 @@
 
+-----example1 var legacy code
+var x = 1;
+console.log(x);			// 1
+
+-----example2 var legacy code has silent error
+var x = 1;
+var x = 2;
+console.log(x);			// 2 note no error thrown (silent error), problem if working on team
+
+-----example3 let throws error
+let x = 1;
+let x = 2;
+console.log(x);			main.js:2 Uncaught SyntaxError: Identifier 'x' has already been declared (at main.js:2:5)
+
+-----example4 let allows reassignment
+let x = 1;
+x = 2;
+console.log(x);			// 2, no error b/c we declared variable once and then reassigned
+
+-----example5 const throws an error
+const x = 1;
+x = 2;
+console.log(x);			// main.js:2 Uncaught TypeError: Assignment to constant variable at main.js:2:3
+
+				// so use const always except when you know you need to reassign then use let
+
+Scope
+// global
+// local scope - block scope	can put block {} inside function
+// local scope - function scope	can put function inside function
+
+
+-----example6 	// global scope	// no errors in console
+var x = 1;
+let y = 2;
+const z = 3;					
+
+
+-----example7 	// define y again but no error
+
+// global scope
+var x = 1;
+let y = 2;
+const z = 3;
+
+// local scope
+{
+    let y = 4;			// no errors in console
+    
+}
+
+
+-----example8 define y 3 times and see console output, no errors thrown
+// global scope
+var x = 1;
+let y = 2;
+const z = 3;
+console.log(y);			// 2
+
+// local block scope
+{
+    let y = 4;
+    console.log(y);		// 4
+}
+
+console.log (y);		// 2
+
+
+-----example9
+// global scope
+var x = 1;
+let y = 2;
+const z = 3;
+console.log(y);			// 2 note that global scope prints 1st then local block scope prints (differnt memory locations)
+
+// local block scope
+{
+    let y = 4;
+    console.log(y);		// 4 so local scope is not avaiable in the global scope
+}
+
+// local function scope
+function myFunc() {
+    const z = 5;
+}
+
+console.log(y);			// 2 reverts back to global scope
+
+
+-----example10 note just comment out prior example global scope definition will throw an error when trying to console log y
+-----so here global scope is commented out thus when console log occurs at bottom of code will throw an error as y is not defined
+-----so here y is defined in local scope but not global scope but console log statement looks to global scope
+
+// global scope
+var x = 1;
+// let y = 2;
+const z = 3;
+console.log(y);			// main.js:5 Uncaught ReferenceError: y is not defined at main.js:5:13
+
+// local block scope
+{
+    let y = 4;
+    console.log(y);
+}
+
+// local function scope
+function myFunc() {
+    const z = 5;
+}
+
+console.log(y);
+
+
+-----example11 so now we comment
+// global scope
+var x = 1;
+// let y = 2;		// commented out so not available
+const z = 3;
+console.log(y);		// throws error as cant find y
+
+// local block scope
+{
+    let y = 4;
+    console.log(y);	// y is in local block scope but that local block scope is not visible to global console log 
+}
+
+// local function scope
+function myFunc() {
+    const z = 5;
+}
+
+console.log(y);		// thus we get an error thrown
+
+
+
+-----example12						v01.53.36
+// global scope
+var x = 1;
+// let y = 2;
+// const z = 3;		// here we comment out z
+
+// local block scope
+{
+    let y = 4;
+    console.log(y);	// this prints 4 is ok
+}
+
+// local function scope
+function myFunc() {
+    const z = 5;
+}
+
+console.log(z);		// try to console log but z is not defined at global level
+			// Uncaught ReferenceError: z is not defined at main.js:17:13
+
+
+-----example13partial		// move console log from global position to within function, then it works by calling myFunc()
+// local function scope
+function myFunc() {
+    const z = 5;
+    console.log(z);
+}
+
+myFunc();
+
+
+-----example13 full example // now we get 4 from block scope and 5 from function scope (both correct)
+// global scope
+var x = 1;
+// let y = 2;
+// const z = 3;
+
+// local block scope
+{
+    let y = 4;
+    console.log(y);
+}
+
+// local function scope
+function myFunc() {
+    const z = 5;
+    console.log(z);
+}
+
+myFunc();
+
+
+
+-----example14 	// take block scope and put it inside function scope. This works.  // output 5 from function and 4 from block inside function scope
+// global scope
+var x = 1;
+// let y = 2;
+// const z = 3;
+
+// local function scope
+function myFunc() {
+    const z = 5;
+    console.log(z);			// 5
+    
+    // local block scope
+    {
+        let y = 4;
+        console.log(y);			// 4
+    }
+}
+
+myFunc();
+
+
+
+-----example15 	// take block scope and put it inside function scope BUT log value of y
+		// global scope works fine
+		// note 
+		// 2 note this from line 9 
+		// 4 note this from line 14 WILL NOT MOVE UP TO THE FUNCTION SCOPE, THUS IT STAYS WITHIN ITS BLOCK SCOPE
+		// so the only the function in line 9 gets a value y is to get that value from the GLOBAL SCOPE
+		// thus local scope inside a function does NOT MOVE UPWARD to the global level
+// global scope
+var x = 1;
+let y = 2;			// uncomment y in global scope
+// const z = 3;
+
+// local function scope
+function myFunc() {
+    const z = 5;
+    console.log(y);		// change from z to y				LINE 9
+    
+    // local block scope
+    {
+        let y = 4;
+        console.log(y);								LINE 14
+    }
+}
+
+myFunc();
+
+
+
+// pattern here
+// global scope is available to all
+// if (true)
+
+    
+    // local block scope
+    {
+        let y = 4;
+        console.log(y);
+    }
+}
+
+myFunc();
+
+
+// pattern here
+    
+    // local block scope
+    if (true) {				// here if (true) {} essentially create blocks of code
+        let y = 4;
+
+    // local block scope
+    for () {				// same with for () loops
+        let y = 4;
+
+    // local block scope
+    switch {				// same with switch 
+        let y = 4;
+
+so here with are using let or const within a code block and this works fine
+
+// Summary
+// global can be passed down into functions, or function block
+// global can NOT be passed UP into functions, or function block
+// global passed down into functions or blocks but can not be passed up
+
+
+
+
+// Different approach for examples
+
+
+-----example16 basic set up for global
+var x = 1;
+let y = 2;
+const z = 3;
+
+console.log(`global: ${x}`);		// global: 1
+console.log(`global: ${y}`);		// global: 2
+console.log(`global: ${z}`);		// global: 3
+
+
+
+-----example17 basic set up for global, function and function containing block
+var x = 1;	// function scoped
+let y = 2;	// block scoped
+const z = 3;
+
+console.log(`global: ${x}`);		// global: 1
+console.log(`global: ${y}`);		// global: 2
+console.log(`global: ${z}`);		// global: 3
+
+function myFunc() {
+    console.log(`function: ${x}`);	// function: 1
+    console.log(`function: ${y}`);	// function: 2
+    console.log(`function: ${z}`);	// function: 3
+
+    {
+        console.log(`block: ${x}`);	// block: 1
+        console.log(`block: ${y}`);	// block: 2
+        console.log(`block: ${z}`);	// block: 3
+    }
+}
+
+myFunc();
+
+
+
+-----example18 // now we focus on function and block scope from within a function
+var x = 1; // function scoped
+let y = 2; // block scoped
+const z = 3;
+
+console.log(`global: ${x}`);		// global: 1
+console.log(`global: ${y}`);		// global: 2		<------------------------------------------------------------------------------global
+console.log(`global: ${z}`);		// global: 3
+
+function myFunc() {
+    var x = 10;
+    const z = 5;
+    console.log(`function: ${x}`);	// function: 10		<---------------------------parent
+    console.log(`function: ${y}`);	// function: 2		<---------------------------parent // function is pulling y value it needs from global
+    console.log(`function: ${z}`);	// function: 5		<---------------------------parent
+
+    {	
+        console.log(`block: ${x}`);	// block: 10		block is pulling values from parent // we have no definitions at the block level thus its also 10 2 5
+        console.log(`block: ${y}`);	// block: 2		block is pulling values from parent // we have no definitions at the block level thus its also 10 2 5
+        console.log(`block: ${z}`);	// block: 5		block is pulling values from parent // we have no definitions at the block level thus its also 10 2 5
+    }
+}
+
+myFunc();
+
+
+-----example19 // now we add definitions at the block level
+var x = 1; // function scoped
+let y = 2; // block scoped
+const z = 3;
+
+console.log(`global: ${x}`);		// global: 1
+console.log(`global: ${y}`);		// global: 2
+console.log(`global: ${z}`);		// global: 3
+
+function myFunc() {
+    var x = 10;
+    const z = 5;
+    console.log(`function: ${x}`);	// function: 11
+    console.log(`function: ${y}`);	// function: 2
+    console.log(`function: ${z}`);	// function: 5
+
+    {
+        var x = 11;						// so here we define x and z at the block level
+        const z = 6;						// so here we define x and z at the block level
+        console.log(`block: ${x}`);	// block: 11 
+        console.log(`block: ${y}`);	// block: 2
+        console.log(`block: ${z}`);	// block: 6
+    }
+}
+
+myFunc();
+
+
+
+-----example20 BEFORE // now we make a change and see what else changes (move function console lines to AFTER function block)
+var x = 1; // function scoped
+let y = 2; // block scoped
+const z = 3;
+
+console.log(`global: ${x}`);					// global: 1
+console.log(`global: ${y}`);					// global: 2
+console.log(`global: ${z}`);					// global: 3
+
+function myFunc() {
+    var x = 10;
+    const z = 5;
+    console.log(`function: ${x}`);	// MOVE THIS DOWN	// function: 11					11 	<---------	
+    console.log(`function: ${y}`);	// MOVE THIS DOWN	// function: 2					2 	<---------
+    console.log(`function: ${z}`);	// MOVE THIS DOWN	// function: 5					6 	<---------
+    {
+        var x = 11;
+        const z = 6;
+        console.log(`block: ${x}`);				// block: 11					11			 	<---------
+        console.log(`block: ${y}`);				// block: 2					2				<---------
+        console.log(`block: ${z}`);				// block: 6					5				<---------
+    }
+}
+
+myFunc();
+
+-----example20 AFTER //
+var x = 1; // function scoped
+let y = 2; // block scoped
+const z = 3;
+
+console.log(`global: ${x}`);
+console.log(`global: ${y}`);
+console.log(`global: ${z}`);
+
+function myFunc() {
+    var x = 10;
+    const z = 5;
+    {
+        var x = 11;	// var is function scoped (b/c we used var, this value is available outside of the block, thus function scoped)
+        const z = 6;	// const is blocked scoped (thus const only allowed the value of 6 to be available INSIDE the block) b/c both const and let are both block scoped
+        console.log(`block: ${x}`);				// block: 					11				<---------
+        console.log(`block: ${y}`);				// block: 					2				<---------
+        console.log(`block: ${z}`);				// block: 					6				<---------
+    }
+    console.log(`function: ${x}`);	// TO HERE		// function: 					11 	<---------
+    console.log(`function: ${y}`);	// TO HERE		// function: 					2 	<---------
+    console.log(`function: ${z}`);	// TO HERE		// function: 					5 	<---------
+}
+
+myFunc();
+
+			// thus for the block, its value stays at 6 b/c its block scoped and thus stays within the block
+			// while for the function, its value reverts from 6 to 5.
+
+
+Summary: 
+Global = not a function or block. Not desirable.
+Local = in a function or block. Not global.
+var instantiates function() scoped variables.
+let and const instantiate {block} scoped variables.
+
+Tips:
+- avoid using var. Stick with const and let.
+- use const unless you need to reassign value.
+- use let if you know you will reassign value.
+
