@@ -1,1 +1,163 @@
+const myArray = [];
+myArray[0] = "Dave";
+myArray[1] = 1001;
+myArray[2] = false;
+
+console.log(myArray);		(3) ['Dave', 1001, false]
+
+ 	or
+
+console.log(myArray[0]);	Dave
+console.log(myArray[1]);	1001
+console.log(myArray[2]);	false
+
+console.log(myArray.length);	3
+
+
+console.log(myArray[myArray.length - 1]);		false
+console.log(myArray[myArray.length - 2]);		1001
+console.log(myArray[myArray.length - 3]);		Dave
+
+myArray.push("school");					// there is no output.
+console.log(myArray);					(4) ['Dave', 1001, false, 'school']
+console.log(myArray[myArray.length - 1]);		school
+
+myArray.push(42);					adds to end of array
+
+myArray.pop();
+console.log(myArray);					(3) ['Dave', 1001, false]
+
+const lastItem = myArray.pop();				school					pops off last item
+console.log(myArray);					(3) ['Dave', 1001, false]
+console.log(lastItem);					school
+
+myArray.unshift(42);										adds to front of array
+console.log(myArray);					(4) [42, 'Dave', 1001, false]
+
+const newLength = myArray.unshift(42);			adds 42 to front then returns length of new array
+console.log(newLength);					42
+
+console.log(myArray);					(3) ['Dave', 1001, false]
+myArray.push(42);					adds to the end of array
+console.log(myArray);					(4) ['Dave', 1001, false, 42]
+myArray.pop();						removes from end of array
+console.log(myArray);					(3) ['Dave', 1001, false]
+
+const firstItem = myArray.shift();			removes from front of array and puts into firstItem 
+
+myArray.shift();					front of array remove from 
+myArray.unshift(42);					front of array adds to 
+myArray.push(42);					end of array adds to 
+myArray.pop();						end of array removes from 
+
+console.log(typeof (myArray));				object
+
+delete myArray[1];					
+console.log(myArray);					(3) ['Dave', empty, false]  		notice it does not remove the position in memory
+console.log(myArray[1]);				undefined
+
+thus use a method to add or remove middle elements from inside array
+
+myArray.splice(1, 1);					delete 1 element from that position [1] so here 2 moves to 1
+console.log(myArray);					(2) ['Dave', false]
+
+
+myArray.splice(1, 1, 42);				delete then replace that specific value
+console.log(myArray);					(3) ['Dave', 1001, false]
+
+
+myArray.splice(1, 0, 42);				start at position [1] and delete nothing and insert 42 at position [1]
+console.log(myArray);					(4) ['Dave', 42, 1001, false]
+
+
+const myArray = ['A', 'B', 'C', 'D', 'E', 'F'];
+console.log(myArray);					(6) ['A', 'B', 'C', 'D', 'E', 'F']
+
+
+const newArray = myArray.slice(2);			slices off the beginning
+console.log(myArray);					(6) ['A', 'B', 'C', 'D', 'E', 'F']		note original array not changed
+console.log(newArray);					(4) ['C', 'D', 'E', 'F']
+
+
+const newArray = myArray.slice(2, 5);
+console.log(myArray);					(6) ['A', 'B', 'C', 'D', 'E', 'F']		note original array not changed
+console.log(newArray);					(3) ['C', 'D', 'E']
+
+
+myArray.reverse();					reverses (appears to reverse the original array)
+console.log(myArray);					(6) ['F', 'E', 'D', 'C', 'B', 'A']
+
+
+const newString = myArray.join();			joins elements from array and creates a string
+console.log(newString);					A,B,C,D,E,F
+console.log(typeof(newString));				string
+
+
+const myArray = ["A", 42, "C", "D", "E", "F"];		
+console.log(myArray);					(6) ['A', 42, 'C', 'D', 'E', 'F']		take an array
+	
+
+const newString = myArray.join();									turn that array into a string (comma delimited)
+console.log(newString);					A,42,B,C,D,E,F					new string is individual characters
+
+
+const myArray = ["A", 42];				
+console.log(myArray);					(2) ['A', 42]
+
+const newString = myArray.join();
+console.log(newString);					A,42
+console.log(newString.length);				4
+console.log(newString[0]);				A
+console.log(newString[1]);				,
+console.log(newString[2]);				4
+console.log(newString[3]);				2
+console.log(newString[4]);				undefined
+
+
+const myArray = ["A", 42, "C", "D", "E", "F"];
+console.log(myArray);					(6) ['A', 42, 'C', 'D', 'E', 'F']
+
+const newString = myArray.join();	
+console.log(newString);					A,42,C,D,E,F
+console.log(newString.length);				12
+console.log(newString[0]);				A
+console.log(newString[1]);				,
+console.log(newString[2]);				4
+console.log(newString[3]);				2
+console.log(newString[4]);				,
+console.log(newString[5]);				B
+console.log(newString[6]);				,
+console.log(newString[7]);				C
+console.log(newString[8]);				,
+console.log(newString[9]);				D
+console.log(newString[10]);				,
+console.log(newString[11]);				E
+console.log(newString[12]);				,
+console.log(newString[13]);				F
+
+
+const myArray = ["A", 42, "C", "D", "E", "F"];		start with an array
+const newString = myArray.join();			convert array into a string (comma delimited)
+console.log(newString);					A,42,C,D,E,F
+const newArray = newString.split(",");			turn that string back into an array
+console.log(newArray);					(6) ['A', 42, 'C', 'D', 'E', 'F']
+
+
+const myArrayA = ["A", 42, "C"];
+const myArrayB = ["D", "E", "F"];
+console.log(myArrayA);					['A', 42, 'C']
+console.log(myArrayB);					['D', 'E', 'F']
+const newArray = myArrayA.concat(myArrayB);
+console.log(newArray);					(6) ['A', 42, 'C', 'D', 'E', 'F']
+
+const newArray = myArrayB.concat(myArrayA);		(6) ['D', 'E', 'F', 'A', 42, 'C']
+
+
+							// Spread Operator
+const myArrayA = ["A", 42, "C"];
+const myArrayB = ["D", "E", "F"];
+
+const newArray = [...myArrayA, ...myArrayB];		// includes elements itself, not the array structures
+
+console.log(newArray);					(6) ['D', 'E', 'F', 'A', 42, 'C']
 
