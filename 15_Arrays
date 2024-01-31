@@ -190,3 +190,6 @@ console.log(clothesDept[1][0]);				sweat tops
 
 const sportsStore = [equipDept, clothesDept];
 console.log(sportsStore);				(2) [Array(2), Array(2)]  // note array holds 2 elements (which are actually arrays)
+
+console.log(sportsStore[0][0][1]);			football		// 3 dimensional nested array
+console.log(sportsStore[1][1][0]);			sweat tops		// 3 dimensional nested array
