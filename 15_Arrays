@@ -159,5 +159,34 @@ const myArrayB = ["D", "E", "F"];
 
 const newArray = [...myArrayA, ...myArrayB];		// includes elements itself, not the array structures
 
-console.log(newArray);					(6) ['D', 'E', 'F', 'A', 42, 'C']
+console.log(newArray);					(6) ['D', 'E', 'F', 'A', 42, 'C']			v02.24.56
 
+console.log(newArray = [myArrayB, myArrayA]);		(2) [Array(3), Array(3)]
+console.log(typeof (newArray));				object
+console.log(newArray = [...myArrayB, myArrayA]);	(2) ['D', 'E', 'F', Array(3)]		// Spread syntax "expands" an array into its elements
+console.log(newArray = [...myArrayB, ...myArrayA]);	(2) ['D', 'E', 'F', 'A', 42, 'C']
+
+
+// access values from nested arrays
+
+const equipShelfA = ["baseball", "football", "volleyball"];
+const equipShelfB = ["basketball", "golf balls", "tennis balls"];
+
+const clothesShelfA = ["tank tops", "t-shirts", "jerseys"];
+const clothesShelfB = ["sweat tops", "sweat pants", "hoodies"];
+
+console.log(equipShelfA[1]);				football
+// or
+console.log(clothesShelfB[0]);				sweat tops
+
+const equipDept = [equipShelfA, equipShelfB];
+const clothesDept = [clothesShelfA, clothesShelfB];
+
+console.log(equipDept);					(2) [Array(3), Array(3)]
+console.log(clothesDept);				(2) [Array(3), Array(3)]
+
+console.log(equipDept[0][1]);				football
+console.log(clothesDept[1][0]);				sweat tops
+
+const sportsStore = [equipDept, clothesDept];
+console.log(sportsStore);				(2) [Array(2), Array(2)]  // note array holds 2 elements (which are actually arrays)
