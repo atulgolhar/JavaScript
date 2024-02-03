@@ -26,3 +26,12 @@ console.log(myArray);
 
 myArray.splice(1, 0, "foo", "bar");
 console.log("Splice Example", myArray);
+
+const myArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+console.log(myArray);
+console.log(myArray.length);
+
+const newArray = myArray.slice(2, 5);
+console.log(newArray);
+
+// Note: slice begins at index[2] but counts by elements from beginning
