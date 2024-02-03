@@ -35,3 +35,46 @@ const newArray = myArray.slice(2, 5);
 console.log(newArray);
 
 // Note: slice begins at index[2] but counts by elements from beginning
+
+
+const myArray = ["Aaa", "Bbb", "Ccc", "Ddd", "Eee", "Fff", "Ggg"];
+console.log(myArray);
+
+// Show 3 letters, 1st capital, 2nd 3rd lower case, go from A to G with commnas.
+// Create new strings every 3 letters (ie 4 characters) create individual string slices.
+// Document in console each string name and results
+
+const newString = myArray.join();
+console.log(newString);
+console.log("typeof:", typeof(newString));
+console.log("length:", newString.length);
+let newStringPart1 = newString.slice(0, 4);
+let newStringPart2 = newString.slice(4, 8);
+let newStringPart3 = newString.slice(8, 12);
+let newStringPart4 = newString.slice(12, 16);
+let newStringPart5 = newString.slice(16, 20);
+let newStringPart6 = newString.slice(20, 24);
+let newStringPart7 = newString.slice(24, 28);
+let newStringPart8 = newString.slice(28, 32);
+console.log("newString1", newStringPart1);
+console.log("newString2", newStringPart2);
+console.log("newString3", newStringPart3);
+console.log("newString4", newStringPart4);
+console.log("newString5", newStringPart5);
+console.log("newString6", newStringPart6);
+console.log("newString7", newStringPart7);
+console.log("newString8", newStringPart8);
+
+// Output is here:
+(7) ['Aaa', 'Bbb', 'Ccc', 'Ddd', 'Eee', 'Fff', 'Ggg']
+main.js:5 Aaa,Bbb,Ccc,Ddd,Eee,Fff,Ggg
+main.js:6 typeof: string
+main.js:7 length: 27
+main.js:16 newString1 Aaa,
+main.js:17 newString2 Bbb,
+main.js:18 newString3 Ccc,
+main.js:19 newString4 Ddd,
+main.js:20 newString5 Eee,
+main.js:21 newString6 Fff,
+main.js:22 newString7 Ggg
+main.js:23 newString8 
