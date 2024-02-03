@@ -1,0 +1,19 @@
+const myArray = [];
+myArray[0] = "Mon";
+myArray[1] = "Tues";
+myArray[2] = "Wed";
+myArray[3] = "Th";
+myArray[4] = "T1";
+myArray[5] = "T2";
+myArray[6] = "T3";
+myArray[7] = "T4";
+console.log("Start", myArray);
+
+myArray.shift();
+console.log("Shift", myArray);
+
+myArray.unshift("Soccer");
+console.log("Unshift", myArray);
+
+myArray.splice(1, 2); // delete 1 element from position 1
+console.log("Splice", myArray);
