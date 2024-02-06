@@ -1,0 +1,67 @@
+// Articulate Logic Step By Step
+
+// Step 1 - Start here
+
+let playGame = confirm("Shall we play a game of rps?");
+console.log(playGame);
+
+if (playGame) {
+    let playerChoice = prompt("Please choose rock, paper or scissors");
+    if (playerChoice) {
+        const playerOne = playerChoice.trim().toLowerCase();
+    } else {
+        alert("You didn't enter rock, paper or scissors");
+    }
+} else {
+    console.log("No? maybe next time");
+}
+
+
+// step by step build out rules
+/*
+confirm "shall we play a game of rps?"
+capture answer playGame, console.log
+if true // play 
+else not, maybe next time
+
+build out // play, determine playerChoice, prompt, capture answer
+if playerChoice answer exists -create playerOne trim lowercase
+else alert "you didn't enter proper text rock, paper sciossors"
+*/
+
+
+
+// Step 2 - Now build out to this
+// this allows console self-check for computer index - does the calcuation work? range 0-2 with multiple interations to prove it
+
+let playGame = confirm("Shall we play a game of rps?");
+console.log(playGame);
+
+if (playGame) {
+    let playerChoice = prompt("Please choose rock, paper or scissors");
+    console.log(playerChoice);
+    if (playerChoice) {
+        const playerOne = playerChoice.trim().toLowerCase(); // raw input cleaned up for comparison
+        if (
+            playerOne === "rock" ||
+            playerOne === "paper" ||
+            playerOne === "scissors"
+        ) {
+            // computerIndex = Math.floor(Math.random() * 3);
+            console.log(Math.floor(Math.random() * 3));
+            console.log(Math.floor(Math.random() * 3));
+            console.log(Math.floor(Math.random() * 3));
+            console.log(Math.floor(Math.random() * 3));
+            console.log(Math.floor(Math.random() * 3));
+            console.log(Math.floor(Math.random() * 3));
+            console.log(Math.floor(Math.random() * 3));
+            console.log(Math.floor(Math.random() * 3));
+            console.log(Math.floor(Math.random() * 3));
+            // determine result
+        }
+    } else {
+        alert("You didn't enter rock, paper or scissors");
+    }
+} else {
+    console.log("No? maybe next time");
+}
