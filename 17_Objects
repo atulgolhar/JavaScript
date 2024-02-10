@@ -1,1 +1,76 @@
+// Objects
+// key-value pairs in curly braces
+// objects stored in key-values pairs in {}
+
+const myObj = { name: "Dave" );	{name: 'Dave'}						{name: 'Dave'}  	main.js:2
+console.log(myObj.name);	Dave							name: "Dave"
+											[[Prototype]]: Object
+
+											// keep clicking on triangles
+
+											{name: 'Dave'}
+											name: "Dave"
+											[[Prototype]]: Object
+											constructor: ƒ Object()
+											hasOwnProperty: ƒ hasOwnProperty()
+											isPrototypeOf: ƒ isPrototypeOf()
+											propertyIsEnumerable: ƒ propertyIsEnumerable()
+											toLocaleString: ƒ toLocaleString()
+											toString: ƒ toString()
+											valueOf: ƒ valueOf()
+											__defineGetter__: ƒ __defineGetter__()
+											__defineSetter__: ƒ __defineSetter__()
+											__lookupGetter__: ƒ __lookupGetter__()
+											__lookupSetter__: ƒ __lookupSetter__()
+											__proto__: (...)
+											get __proto__: ƒ __proto__()
+											set __proto__: ƒ __proto__()
+
+const myObj = { name: "Dave" };
+
+const anotherObj = {
+    alive: true,				// property name of the object
+    answer: 42,					// property name of the object
+    hobbies: ["Eat", "Sleep", "Code"],		// array inside the object
+    beverage: {					// nested object inside the object
+        morning: "Coffee",			// nested key-value pairs inside the nested object
+        afternoon: "Iced Tea"			// nested key-value pairs inside the nested object
+    },
+    action: function(				// anonymous function // note action is the method name
+	return "Hello World!";			// need the return keyword
+    )				 		
+};
+
+console.log(myObj.name);			Dave
+console.log(anotherObj.alive);			true
+console.log(anotherObj.answer);			42
+console.log(anotherObj.hobbies);		(3) ['Eat', 'Sleep', 'Code']
+console.log(anotherObj.hobbies[0]);		Eat	// we are using dot notation
+console.log(anotherObj["alive"]);		true	// we are using key name in quotes, dont need dot notation
+console.log(anotherObj["beverage"]);		{morning: 'Coffee', afternoon: 'Iced Tea'}	// gives entire nested object
+
+console.log(anotherObj.beverage.morning);	Coffee
+console.log(anotherObj.beverage["morning"]);	Coffee
+
+// we can also have methods inside an object	
+// methods here are functions that we define within the object
+
+console.log(anotherObj.action());		Hello World!
+
+// keyword this		refer to information from inside the function using the keyword this
+			here the keyword this refers to the object
+			so we can pull other values out of the object
+
+    action: function () {
+        return `Time for ${this.beverage.morning}`;		Time for Coffee
+    },								// here the keyword this refers to the object
+
+this function action
+called a method = this anonymous function is inside an object
+so the method action of anotherObj returns Time for Coffee
+
+
+// new example=====================
+
+
 
