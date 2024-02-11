@@ -36,9 +36,9 @@ const anotherObj = {
         morning: "Coffee",			// nested key-value pairs inside the nested object
         afternoon: "Iced Tea"			// nested key-value pairs inside the nested object
     },
-    action: function(				// anonymous function // note action is the method name
+    action: function () {			// anonymous function // note action is the method name
 	return "Hello World!";			// need the return keyword
-    )				 		
+    }	 		
 };
 
 console.log(myObj.name);			Dave
