@@ -8,3 +8,33 @@ this.crust
 put in a method bake()
 inside method console.log with add template literal 			console.log( ${this.size} ${this.crust} );
 this is a blueprint for creating the object
+
+
+// getter and setter concepts v03.18.04			// we can change property's value via dot notation
+
+const myPizza = new Pizza("pepporini", "small");
+myPizza.type = "supreme_baby";				// BAD, NOT DESIRABLE
+myPizza.bake();						// Baking a small supreme_baby original crust pizza!
+console.log(myPizza.type);
+
+
+// we can change property's value via dot notation but ths is NOT DESIRABLE 
+// Better to use Getter and Setter
+// note that this code sits INSIDE the class Pizza
+
+// use pizzaCrust as a new object
+// it looks like a method when we set it
+
+get pizzaCrust() {					// method structure to ingest info, needed set up for outbound use
+  return this.crust;					// link new object with existing structure this.crust
+}
+set pizzaCrust(pizzaCrust) {				// now we set or link new object with new value
+  this.crust = pizzaCrust;				// now we can use dot notation with pizzaCrust to set the value
+}
+
+--------------// Better use of getter and setter
+const myPizza = new Pizza("pepporini", "small");
+myPizza.pizzaCrust = "thin";				// Baking a small pepporini thin crust pizza!
+myPizza.bake();
+console.log(myPizza.type);
+-------------
