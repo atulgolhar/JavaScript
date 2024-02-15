@@ -38,3 +38,23 @@ myPizza.pizzaCrust = "thin";				// Baking a small pepporini thin crust pizza!
 myPizza.bake();
 console.log(myPizza.type);
 -------------
+
+
+
+// basic example
+class Pizza {
+    constructor() {
+        this.crust = "thin";
+        this.topping = "broccoli";
+        this.sauce = "ricotta";
+    }
+
+    bake() {
+        console.log(
+            `We are baking a ${this.crust} crust ${this.topping} ${this.sauce} pizza now!`
+        );
+    }
+}
+
+const myPizza = new Pizza();
+myPizza.bake();
