@@ -1,0 +1,18 @@
+// create object, use MDN docs as guide for this keyword
+
+const test = {
+    prop: 42,
+    func: function () {
+        return this.prop;
+    },
+};
+
+const testWarnerBrothersPappi = {
+    propPappi: "SpinachBurger",
+    funcPappi: function () {
+        return this.propPappi;
+    },
+};
+
+console.log(test.func());
+console.log(testWarnerBrothersPappi.funcPappi());
