@@ -1,0 +1,50 @@
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
+// the value of this always changes depending upon HOW a function is called
+
+function getThis() {
+    return this;
+}
+
+function getThisStrict() {
+    "use strict";
+    return this;
+}
+
+function logThis() {
+    "use strict";
+    console.log("Ex1", this);
+}
+[1, 2, 3].forEach(logThis);
+
+const obj1 = { name: "obj1" }; // defined differently here
+const obj2 = { name: "obj2" }; // defined differently here
+
+const obj3 = {
+    __proto__: obj1,
+    name: "obj3",
+};
+
+const obj4 = {
+    name: "obj4",
+    getThis() {
+        return this;
+    },
+};
+
+obj5 = { name: "obj5" };
+
+obj1.getThis = getThis; // all use the SAME generic function
+obj2.getThis = getThis; // all use the SAME generic function
+obj3.getThis = getThis; // all use the SAME generic function
+obj5.getThis = obj4.getThis;
+
+Number.prototype.getThisStrict = getThisStrict;
+Number.prototype.getThis = getThis;
+
+console.log("Ex2", obj1.getThis());
+console.log("Ex3", obj2.getThis());
+console.log("Ex4", obj3.getThis());
+console.log("Ex5", obj5.getThis());
+console.log("Ex6", typeof (1).getThisStrict());
+console.log("Ex7", typeof getThisStrict());
+console.log("Ex8", getThis() === globalThis);
