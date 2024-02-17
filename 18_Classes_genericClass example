@@ -1,0 +1,8 @@
+class GenericClass {
+    constructor() {
+        this.type1 = "var1";
+        this.type2 = "var2";
+    }
+}
+
+console.log(`Executing a ${this.type1} and ${this.type2}`);
