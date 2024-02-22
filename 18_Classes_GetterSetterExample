@@ -1,0 +1,32 @@
+class Pizza {
+    constructor(pizzaSize, pizzaType) {
+        this.size = pizzaSize;
+        this.type = pizzaType;
+        this.crust = "original";
+        this.kiddo = "NOLUMPS";
+    }
+
+    getpizzaKidSauce() {
+        return this.kiddo;
+    }
+
+    setpizzaKidSauce(pizzaKidSauce) {
+        this.kiddo = pizzaKidSauce;
+    }
+    bake() {
+        console.log(
+            `Baking a ${this.kiddo} ${this.size} size ${this.type} ${this.crust} crust pizza!`
+        );
+    }
+}
+console.log(
+    "General sentence structure is Baking a KIDSAUCE SIZENAME size TOPPING CRUSTSTYLE crust pizza."
+);
+const myPizza = new Pizza("SMALL", "pepperoni"); // initialize with small pizza
+myPizza.bake();
+myPizza.size = "MEDIUM"; // dot.notation to change parameter to medium
+myPizza.bake();
+myPizza["size"] = "LARGE"; // bracket notation to change parameter to large
+myPizza.bake();
+myPizza.setpizzaKidSauce("NOLUMPxxxxxSDADDY"); // myPizza.setpizzaKidSauce = "NOLUMPxxxxxSDADDY";
+myPizza.bake();
