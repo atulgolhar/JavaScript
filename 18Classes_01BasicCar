@@ -1,0 +1,16 @@
+class Car {
+    constructor() {
+        this.door = "two";
+        this.engine = "4 cylinder";
+        this.horsepower = "400hp";
+    }
+
+    drive() {
+        console.log(
+            `Driving a ${this.door} door, ${this.engine} engine ${this.horsepower} car!`
+        );
+    }
+}
+
+const my1stCar = new Car();
+my1stCar.drive();
