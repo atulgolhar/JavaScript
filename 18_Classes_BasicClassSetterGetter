@@ -1,0 +1,24 @@
+class Pizza {
+    constructor(pizzaType, pizzaSize) {
+        this.type = pizzaType;
+        this.size = pizzaSize;
+        this.crust = "original";
+    }
+
+    getCrust() {
+        return this.crust;
+    }
+
+    setCrust(pizzaCrust) {
+        this.crust = pizzaCrust;
+    }
+    bake() {
+        console.log(
+            `Baking a size: ${this.size}, type: ${this.type}, crust: ${this.crust} pizza!`
+        );
+    }
+}
+
+const myPizza = new Pizza("SMALL", "pepperoni");
+myPizza.pizzaCrust = "thin";
+myPizza.bake();
