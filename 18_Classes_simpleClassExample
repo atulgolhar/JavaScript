@@ -1,0 +1,8 @@
+class Pizza {
+    constructor() {}
+    bake() {
+        console.log("Hello World");
+    }
+}
+const myPizza = new Pizza();
+myPizza.bake();
