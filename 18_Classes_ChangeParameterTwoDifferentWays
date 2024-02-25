@@ -1,0 +1,36 @@
+class Pizza {
+    constructor(pizzaCrust, boxShape) {
+        this.crust = pizzaCrust;
+        this.sauce = "TomatoSauce";
+        this.size = "small";
+        this.box = boxShape;
+        this.kiddo = "kiddoTRY1";
+    }
+
+    get pizzaKidSauce() {
+        return this.kiddo;
+    }
+
+    set pizzaKidSauce6(pizzaKidSauce5) {
+        this.kiddo = pizzaKidSauce5;
+    }
+
+    bake() {
+        console.log(
+            `Baking a ${this.kiddo} texture, 
+            ${this.crust} crust, ${this.sauce} sauce, ${this.size} size for a ${this.box} boxed pizza.`
+        );
+    }
+}
+const myPizza = new Pizza("LARGE", "Square");
+myPizza.size = "SIZEHUGE";
+myPizza["size"] = "sizeMEDIUM";
+myPizza.kiddo = "KIDDOTRY2";
+myPizza.pizzaKidSauce6 = "kiddoTRY333333333333333";
+myPizza.bake();
+
+
+/*
+Baking a kiddoTRY333333333333333 texture, 
+LARGE crust, TomatoSauce sauce, sizeMEDIUM size for a Square boxed pizza.
+*/
