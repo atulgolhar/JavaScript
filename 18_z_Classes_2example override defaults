@@ -1,0 +1,25 @@
+class Pizza {
+    constructor(try1) {
+        this.crust = "1Crust_Thin";
+        this.box = "1Box_cardboard";
+    }
+    getPizzaBox() {
+        return this.box;
+    }
+    setPizzaBox(pizzaBox) {
+        this.box = pizzaBox;
+    }
+    bake() {
+        console.log(`Baking a pizza: ${this.box} ${this.crust}`);
+    }
+}
+
+const myPizza = new Pizza("2Box");
+myPizza.bake();
+
+// "2Box_Square"
+// this.sauce = "1Sauce_NoLumps";
+// this.cheese = "1Cheese_Level1";
+// this.size = "1Size_Small";
+
+// `Baking a pizza: ${this.box} ${this.sauce} ${this.cheese} ${this.crust} ${this.size}`
