@@ -1,8 +1,25 @@
 class Pizza {
-    constructor() {}
+    constructor(Try1, Try2, Try3) {
+        this.size;
+        this.crust;
+        this.sauce;
+        // this.size = Try1;
+        // this.crust = Try2;
+        // this.sauce = Try3;
+        this.box = "square";
+    }
+    getPizzaBox() {
+        return this.box;
+    }
+    setPizzaBox(pizzaBox) {
+        this.box = pizzaBox;
+    }
     bake() {
-        console.log("Hello World");
+        console.log(
+            `Baking a pizza: ${this.size} ${this.crust} ${this.sauce} ${this.box}`
+        );
     }
 }
-const myPizza = new Pizza();
+
+const myPizza = new Pizza("Sizesmall", "Crustthin", "Saucenolumps");
 myPizza.bake();
