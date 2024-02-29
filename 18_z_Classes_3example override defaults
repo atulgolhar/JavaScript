@@ -1,0 +1,24 @@
+// TYPE it up from a blank screen!
+class Pizza {
+    constructor(pizzaSize, pizzaType) {
+        this.size = pizzaSize;
+        this.type = pizzaType;
+        this.crust = "original";
+        this.kiddoNotHere = "NOLUMPS";
+    }
+    getpizzaKidSauce() {
+        return this.kiddo;
+    }
+    setpizzaKidSauce(pizzaKidSauce100) {
+        this.kiddo = pizzaKidSauce100;
+    }
+    bake() {
+        console.log(
+            `Baking a ${this.kiddo} ${this.size} size ${this.type} ${this.crust} crust pizza!`
+        );
+    }
+}
+const myPizza = new Pizza("SMALL", "pepperoni");
+myPizza.bake();
+myPizza.setpizzaKidSauce("NOLUMPxxxxxSDADDY"); // bracket notation with getter and setter
+myPizza.bake();
