@@ -1,0 +1,22 @@
+class Pizza {
+    constructor() {
+        this.kiddo7 = "NOLUMPS";
+    }
+    getpizzaKidSauce1() {
+        return this.kiddo6;
+    }
+    setpizzaKidSauce2(pizzaKidSauce3) {
+        this.kiddo5 = pizzaKidSauce3;
+    }
+    bake() {
+        console.log(`Baking a ${this.kiddo5}`);
+    }
+}
+const myPizza = new Pizza();
+myPizza.bake();
+myPizza.setpizzaKidSauce2("NOLUMPxxxxxSDADDY");
+myPizza.bake();
+
+
+// Baking a undefined
+// Baking a NOLUMPxxxxxSDADDY
