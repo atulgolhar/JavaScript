@@ -1,0 +1,27 @@
+class Pizza {
+    constructor(pizzaSizeMATCH1) {
+        this.size = pizzaSizeMATCH1;
+        this.crust = "original";
+    }
+    getCrust() {
+        return this.crust;
+    }
+    setCrust(pizzaCrust2) {
+        this.crust = pizzaCrust2;
+    }
+}
+
+class SpecialtyPizza extends Pizza {
+    constructor(pizzaSizeMATCH1) {
+        super(pizzaSizeMATCH1);
+        this.type = "The Works";
+    }
+    slice() {
+        console.log(`Our ${this.type} ${this.size} pizza has 8 slices.`);
+    }
+}
+
+const mySpeciality = new SpecialtyPizza("MEDIUM");
+mySpeciality.slice();
+
+// Our The Works MEDIUM pizza has 8 slices.
