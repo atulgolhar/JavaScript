@@ -22,12 +22,23 @@ console.log(object1.hasOwnProperty("property2"));
 console.log(object1.hasOwnProperty("property3"));
 console.log(object1.hasOwnProperty("property4"));
 console.log(object1.hasOwnProperty("property5"));
+console.log("Hello World2");
+console.log(!false);
 
+// Object test for an own property's existence
+console.log("Test1 own Object property's existence");
+const example = {};
+console.log(example.hasOwnProperty("prop1"));
+example.prop1 = 42;
+console.log(example.hasOwnProperty("prop1"));
+example.prop2 = "null";
+console.log(example.hasOwnProperty("prop2"));
+example.prop3 = "undefined";
+console.log(example.hasOwnProperty("prop3"));
 
-// Baking a pizza: NOLUMPS kiddo3ViaMethod This
-// Hello World
-// true
-// true
-// true
-// false
-// false
+console.log("Array Test2 own property");
+const fruitsArray = ["Apple", "Banana", "Lemon"];
+console.log(fruitsArray.hasOwnProperty(0)); // true
+console.log(fruitsArray.hasOwnProperty(1)); // true
+console.log(fruitsArray.hasOwnProperty(2)); // true
+console.log(fruitsArray.hasOwnProperty(3)); // false
