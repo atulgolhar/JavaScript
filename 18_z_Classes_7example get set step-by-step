@@ -1,0 +1,95 @@
+// so now we have the old way
+
+class Pizza {
+    constructor(pizzaType, pizzaSize) {
+        this.type = pizzaType;
+        this.size = pizzaSize;
+        this.crust = "original";
+    }
+    get pizzaCrust() {
+        return this.crust;
+    }
+    set pizzaCrust(pizzaCrust) {
+        this.crust = pizzaCrust;
+    }
+    bake() {
+        console.log(
+            `Baking a ${this.size} ${this.type} ${this.crust} crust pizza!`
+        );
+    }
+}
+const myPizza = new Pizza("pepperoni", "small");
+myPizza.bake();								// Baking a small pepperoni original crust pizza!
+myPizza.pizzaCrust = "thin";			// call it using dot notation
+myPizza.bake();								// Baking a small pepperoni thin crust pizza!
+console.log(myPizza.pizzaCrust);	// thin
+
+/*
+and now we change get and get code blocks 
+to getCrust and setCrust code blocks
+so 1st change the get and set blocks
+from
+   get pizzaCrust() {
+        return this.crust;
+    }
+    set pizzaCrust(pizzaCrust) {
+        this.crust = pizzaCrust;
+    }
+to
+    getCrust() {
+        return this.crust;
+    }
+    setCrust(pizzaCrust) {
+        this.crust = pizzaCrust;
+
+then we change the method call
+myPizza.pizzaCrust = "thin";
+myPizza.setCrust("thin");
+
+by 1st changing the parameter
+myPizza.pizzaCrust = "thin";		
+myPizza.pizzaCrust("thin");
+
+then 2nd changing the method name
+myPizza.pizzaCrust("thin");		// call it like a method so use the operators ()
+myPizza.setCrust("thin");
+
+
+myPizza.pizzaCrust = "thin";		// call it using dot notation
+myPizza.pizzaCrust("thin");		// call it like a method so use the operators ()
+
+
+console.log(myPizza.pizzaCrust);	// here we get the value using this approach
+
+console.log(myPizza.setCrust());	// undefined		FINALLY able to see the difference in using get vs set in the code 
+console.log(myPizza.getCrust());	// thin 		THIS IS CORRECT
+*/
+
+
+
+// Complete code here
+
+class Pizza {
+    constructor(pizzaType, pizzaSize) {
+        this.type = pizzaType;
+        this.size = pizzaSize;
+        this.crust = "original";
+    }
+    getCrust() {
+        return this.crust;
+    }
+    setCrust(pizzaCrust) {
+        this.crust = pizzaCrust;
+    }
+    bake() {
+        console.log(
+            `Baking a ${this.size} ${this.type} ${this.crust} crust pizza!`
+        );
+    }
+}
+const myPizza = new Pizza("pepperoni", "small");
+myPizza.bake();
+myPizza.setCrust("thin");
+myPizza.bake();
+console.log(myPizza.getCrust());
+
