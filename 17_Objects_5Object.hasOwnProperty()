@@ -1,0 +1,33 @@
+class Pizza {
+    constructor(kiddo1TOP) {
+        this.kiddo1 = kiddo1TOP;
+        this.crust2 = "Thin";
+    }
+    bake(kiddo3) {
+        console.log(`Baking a pizza: ${this.kiddo1} ${kiddo3} ${this.crust2} `);
+    }
+}
+
+const myPizza = new Pizza("NOLUMPS");
+myPizza.bake("kiddo3ViaMethod");
+
+const object1 = {};
+object1.property1 = 42;
+object1.property2 = 100;
+object1.property3 = "Hello World";
+
+console.log("Hello World");
+console.log(object1.hasOwnProperty("property1"));
+console.log(object1.hasOwnProperty("property2"));
+console.log(object1.hasOwnProperty("property3"));
+console.log(object1.hasOwnProperty("property4"));
+console.log(object1.hasOwnProperty("property5"));
+
+
+// Baking a pizza: NOLUMPS kiddo3ViaMethod This
+// Hello World
+// true
+// true
+// true
+// false
+// false
