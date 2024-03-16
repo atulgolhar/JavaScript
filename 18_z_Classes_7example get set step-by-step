@@ -121,3 +121,29 @@ myPizza.setCrust("thin");
 myPizza.bake();
 console.log("1: ", myPizza.getCrust());
 console.log("2: ", myPizza.setCrust());
+
+
+
+
+// Start with this basic idea
+
+class Pizza {
+    constructor() {
+        this.size = "medium";
+        this.crust = "original";
+    }
+    bake() {
+        console.log(`Baking a pizza ${this.size} ${this.crust}`);
+    }
+}
+
+myPizza = new Pizza();
+myPizza.bake();
+
+
+// This is how to build a class to accept a JS parameter
+
+// Now pass in a value to the constructor when the object is created
+    constructor() {
+    constructor(pizzaType) {
+
