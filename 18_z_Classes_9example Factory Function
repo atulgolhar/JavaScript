@@ -9,3 +9,32 @@ function pizzaFactory(pizzaSize) {
 
 const myPizza = pizzaFactory("small");
 myPizza.bake();
+
+
+/*
+Factory used for object creation
+return a method inside called bake
+this method is also a function as well
+looks a little different
+
+This was a solution to a problem
+Problem = not being able to create an object with Private fields
+Goal = did not want access from the outside, only wanted to allow access from inside
+Tried imitate this by using Naming Conventions, Getters and Setters
+
+But this works b/c this now sits inside a function (ie specifically a factory function)
+Not able to access the properties from outside the function
+
+
+// Factory Function
+function pizzaFactory(pizzaSize) {
+    const crust = "original";
+    const size = pizzaSize;
+    return {
+        bake: () => console.log(`Baking a pizza ${size} ${crust}`),
+    };
+}
+
+const myPizza = pizzaFactory("small");
+myPizza.bake();
+*/
