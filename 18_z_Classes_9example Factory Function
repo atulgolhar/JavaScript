@@ -1,0 +1,11 @@
+// Factory Function
+function pizzaFactory(pizzaSize) {
+    const crust = "original";
+    const size = pizzaSize;
+    return {
+        bake: () => console.log(`Baking a pizza ${size} ${crust}`),
+    };
+}
+
+const myPizza = pizzaFactory("small");
+myPizza.bake();
