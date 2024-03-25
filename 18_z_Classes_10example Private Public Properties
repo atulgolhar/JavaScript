@@ -1,0 +1,24 @@
+class Pizza {
+    crust = "original";
+    #sauce = "traditional";
+    #size;
+    constructor(pizzaSize) {
+        this.#size = pizzaSize;
+    }
+    getCrust() {
+        return this.crust;
+    }
+    setCrust(pizzaCrust) {
+        this.crust = pizzaCrust;
+    }
+    hereYouGo() {
+        console.log(
+            `Here is your pizza ${this.crust} ${this.#sauce} ${this.#size}`
+        );
+    }
+}
+
+const myPizza = new Pizza("large");
+myPizza.hereYouGo();
+console.log("Public Field myPizza.crust  ", myPizza.crust);
+console.log(myPizza.sauce);
