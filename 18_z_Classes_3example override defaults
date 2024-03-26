@@ -1,4 +1,6 @@
 // TYPE it up from a blank screen!
+// Use bracket notation with getter setter
+
 class Pizza {
     constructor(pizzaSize, pizzaType) {
         this.size = pizzaSize;
