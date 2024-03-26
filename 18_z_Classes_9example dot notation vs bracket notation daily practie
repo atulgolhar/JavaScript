@@ -1,0 +1,20 @@
+class Car {
+    constructor(parameterEngineSize, parameterEngineChemistry) {
+        this.engineSize = parameterEngineSize;
+        this.engineChemistry = parameterEngineChemistry;
+    }
+    drive() {
+        console.log(
+            `Driving a car with ${this.engineSize} ${this.engineChemistry}`
+        );
+    }
+}
+
+const myCar = new Car("v8Gas", "CeramicAluminumCombo");
+myCar.drive();
+myCar.engineSize = "v4SavesGas";            // dot notation
+myCar.drive();
+myCar.engineSize = ["v6Compromise"];        // dot notation
+myCar.drive();
+myCar["engineSize"] = "v12SuperCar";        // bracket notation
+myCar.drive();
