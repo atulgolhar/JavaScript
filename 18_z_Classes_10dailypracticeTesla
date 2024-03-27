@@ -1,0 +1,43 @@
+class Car {
+    constructor(parameterEngineSize, parameterEngineChemistry) {
+        this.engineSize = parameterEngineSize;
+        this.engineChemistry = parameterEngineChemistry;
+    }
+    get doors() {
+        return this.numberOfDoors;
+    }
+    set doors(doors) {
+        this.numberOfDoors = doors;
+    }
+    drive() {
+        console.log(
+            `Driving a car ${this.numberOfDoors} ${this.engineSize} ${this.engineChemistry}`
+        );
+    }
+}
+
+class Tesla extends Car {
+    constructor(parameterEngineSize, parameterEngineChemistry) {
+        super(parameterEngineSize, parameterEngineChemistry);
+        this.engineChemistry = "Chromium";
+        this.engineSize = "v20electric";
+        this.numberOfDoors = "3";
+    }
+}
+
+myCar = new Car("v8", "Ceramic");
+myCar.engineSize = "v4";
+myCar.numberOfDoors = 4; // access via parameter
+myCar.drive();
+myCar.doors1 = 120; // access via setter
+myCar.drive();
+myCar.numberOfDoors = 1; // access via parameter
+myCar.drive();
+myTesla = new Tesla();
+myCar.doors = 12; // access via parameter
+myCar.drive();
+myTesla.drive();
+myTesla.doors = 5;
+myTesla.engineChemistry = "wood";
+myTesla.parameterEngineChemistry = "WOOD"; // error
+myTesla.drive();
