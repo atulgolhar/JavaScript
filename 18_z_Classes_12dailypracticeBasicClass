@@ -26,3 +26,29 @@ myPizza.size = ["1cLARGE"];
 myPizza.bake();
 myPizza["size"] = "1dLarge";
 myPizza.bake();
+
+
+
+// 4/1/24
+class Pizza {
+    constructor(pizzaSize, pizzaType) {
+        this.kiddo = "1NOLUMPS";
+        this.size = pizzaSize;
+        this.type = pizzaType;
+        this.crust = "4original";
+    }
+    get pizzaKidSauce() {
+        return this.kiddo;
+    }
+    set pizzaKidSauce(pizzaKidSauce) {
+        this.kiddo = pizzaKidSauce;
+    }
+    bake() {
+        console.log(
+            `Baking a ${this.kiddo} ${this.size} ${this.type} ${this.crust}`
+        );
+    }
+}
+
+const myPizza = new Pizza("2SMALL", "3pepperoni");
+myPizza.bake();
